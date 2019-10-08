@@ -1,0 +1,523 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>These aren't the SCs you're looking for ... / Patrick H. Lauke</title>
+    <link rel="stylesheet" href="shower/themes/redux-tpglite/styles/screen.css">
+    <link rel="stylesheet" href="shower/themes/redux-tpglite/styles/overrides.css">
+    <link rel="stylesheet" href="highlight/styles/sunburst.css">
+    <style>
+        #yougotthetouch.slide { background-color: #000; }
+    </style>
+    <script src="highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="shower list">
+<header class="caption">
+    <h1>These aren't the SCs you're looking for...</h1>
+    <p>(mis)adventures in WCAG 2.x interpretation and audits</p>
+</header>
+
+<!-- -->
+
+<section class="slide title" id="title"><div>
+    <div class="titlestrap">
+        <img src="./images/tpg-white.svg" alt="The Paciello Group" width="250">
+        <h1>These <strong>aren't</strong> the <abbr title="Success Criteria">SC</abbr>s you're looking for...</h1>
+        <p>(mis)adventures in WCAG 2.x interpretation and audits</p>
+    </div>
+    <p class="info">Patrick H. Lauke / #a11yTO 2019</p>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <h2>about me...</h2>
+    <ul>
+    <li>principal accessibility engineer at <a target="_blank" rel="noopener" href="https://www.paciellogroup.com/">The Paciello Group</a></li>
+    <li>occasional <a target="_blank">W3C AGWG</a> member</li>
+    <li>WCAG <strong>trash panda</strong></li>
+    </ul>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img class="cover" src="images/jedicouncil.png" alt="Still from Star Wars - The Phantom Menace: young Anakin Skywalker standing in front of the Jedi Council">
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        <p>“which success criterion can I <strong>fail</strong> this under?”</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img class="cover pixelated" src="images/fail-all-the-things.png" alt="Meme picture: FAIL ALL THE THINGS">
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        <p>...it depends™</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img class="cover pixelated" src="images/bobbyapproved.gif" alt="Classic 'Bobby Approved' badge image">
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img class="cover" src="images/dredd-law.gif" alt="Animation loop from Judge Dredd (1995) - Dredd shouting 'I am the law'">
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <h2>we are not <strong>lawyers</strong></h2>
+    <p>but our audits and evaluations often have some legal dimension to them.</p>
+    <ul>
+        <li>evaluations should be as objective as possible</li>
+        <li>evaluations should be consistent</li>
+    </ul>
+    <p>...of course, this is easier said than done</p>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        <strong>normative</strong> versus<br><strong>non-normative</strong></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img class="cover" src="images/lebowski-rules.png" alt="Meme picture from The Big Lebowski - Walter pointing his gun, with superimposed text: This isn't Nam, there are rules">
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        <p>don't overstep the <strong>boundaries</strong> of WCAG SCs</p>
+        <p><small>don't claim something has to be fixed/changed "to pass WCAG" when it normatively doesn't</small></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        <p>WCAG SCs are <strong>binary</strong> ...<br>
+        you either<br>
+        <strong>pass</strong> or <strong>fail</strong></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        no weighting given to <strong>impact</strong> of a particular fail
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        fail <strong>a single SC</strong> and you can't really claim to be <strong>conformant</strong>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        <p>WCAG is built on the idea that <strong>success criteria</strong> can be evaluated clearly, unambiguously and consistently...</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        <p>while a handful of criteria are (reasonably) <strong>objective</strong>, a large chunk require quite <strong>subjective</strong> evaluation</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        <p>in some cases, criteria require <strong>interpretation</strong> of the normative language</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img class="cover" src="images/lebowski.gif" alt="Animation loop from The Big Lebowski: the dude sitting at the bowling hall, shaking his head">
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        WCAG success criteria are often <strong>misunderstood</strong> and/or <strong>misinterpreted</strong>...
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img class="cover" src="images/droids.gif" alt="Animation loop from Star Wars - Obi Wan waving his hand and saying: these aren't the droids you're looking for...">
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>1.3.3 <strong>Sensory Characteristics</strong> (Level A)</h2>
+        <blockquote><p>Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.</p></blockquote>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>2.4.6 <strong>Headings and Labels</strong><br>(Level AA)</h2>
+        <blockquote><p>Headings and labels describe topic or purpose.</p></blockquote>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>3.3.2 <strong>Labels or Instructions</strong><br>(Level A)</h2>
+        <blockquote><p>Labels or instructions are provided when content requires user input.</p></blockquote>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        WCAG success criteria and <strong>cascades of fail</strong>...
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide code"><div>
+    <h2>cascade of fail</h2>
+    <pre><code class="json">&lt;a href="..."&gt; &lt;img src="..."&gt; &lt;/a&gt;</code></pre>
+    <p>fails <strong>multiple criteria</strong>...need to consistently report these, but they're tedious.</p>
+    <p>if you already flagged it under the "main" failure(s), does the client <strong>really</strong> benefit from knowing all other ways in which this is wrong? just showing off your auditing acumen?</p>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        <p>auditor education / consistency problems...</p>
+        <p><small>internal training and resources can help</small></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        <small>more problematic are issues caused by</small><br>
+        WCAG SCs that are <strong>vague</strong>, <strong>incomplete</strong> or otherwise <strong>lacking</strong>
+
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        WCAG success criteria can have <strong>loopholes</strong>...
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>2.4.7 <strong>Focus Visible</strong><br>(Level AA)</h2>
+        <blockquote><p>Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.</p></blockquote>
+        <p>...but what does <strong>visible</strong> mean? it's not normatively defined...</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>1.4.11 <strong>Non-text Contrast</strong><br>(Level AA)</h2>
+        <blockquote><p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):</p>
+        <ul>
+            <li>User Interface Components: Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author</li>
+            <li>Graphical Objects: [...]</li>
+        </ul>
+        </blockquote>
+        <p>...but note that this only applies normatively to <strong>adjacent</strong> colors</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>1.4.11 <strong>Non-text Contrast</strong><br>(Level AA)</h2>
+        <blockquote><p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):</p>
+        <ul>
+            <li>User Interface Components: Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author</li>
+            <li>Graphical Objects: [...]</li>
+        </ul>
+        </blockquote>
+        <p>...and what does <strong>determined by the user agent and not modified by the author</strong> cover exactly?</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        WCAG has a few strange <strong>ommissions</strong>...
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>2.4.4 <strong>Link Purpose (In Context)</strong><br>(Level AA)</h2>
+        <blockquote><p>The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.</p></blockquote>
+        <p>...but what about multiple buttons or similar?</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>4.1.2 <strong>Name, Role, Value</strong><br>(Level A)</h2>
+        <blockquote><p>For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.</p></blockquote>
+        <p>...only says it has to have a name, not that the name needs to make sense / convey purpose / etc</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        WCAG success criteria need to be <strong>testable</strong> ... but this then doesn't allow for <strong>nuance</strong>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>2.5.5 <strong>Target Size</strong><br>(Level AAA)</h2>
+        <blockquote><p>The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when:</p>
+        <ul>
+        <li>Equivalent: The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels;</li>
+        <li>Inline: The target is in a sentence or block of text;</li>
+        <li>User Agent Control: The size of the target is determined by the user agent and is not modified by the author;</li>
+        <li>Essential: A particular presentation of the target is essential to the information being conveyed.</li>
+        </ul>
+        </blockquote>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        WCAG success criteria can have <strong>unintended consequences</strong>...
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        some WCAG success criteria can seem <strong>outdated</strong> and <strong>unnecessary</strong>...
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img class="cover" src="images/statler-and-waldorf.gif" alt="Animation loop from the Muppet Show - Statler and Waldorf in their balcony seat">
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        <p>WCAG 2.x is <strong>not perfect</strong></p>
+        <p><small>written by fallible, but well-meaning humans after all</small></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img src="images/w3-act-r.png" alt="Screenshot of W3C ACT Rules Community Rules">
+        <p><a href="https://w3.org/community/act-r/"">w3.org/community/act-r</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img src="images/github-act-r.png" alt="Composite screenshot of W3C ACT Rules Community pages on GitHub, showing a selection of rules, and the start of a specific rule (in this case, 'Heading is descriptive')">
+        <p><a href="https://act-rules.github.io/rules/"">act-rules.github.io/rules</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img src="images/w3c-silver-tf.png" alt="Screenshot of W3C Silver Task Force of the AGWG page">
+        <p><a href="https://w3.org/WAI/GL/task-forces/silver"">w3.org/WAI/GL/task-forces/silver</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img src="images/w3c-silver-scoring.png" alt="Screenshot of W3C Silver Task Force wiki's conformance section">
+        <p><a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page#Silver_Conformance"">www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page#Silver_Conformance</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        <p>don't creatively "reinterpret"<br>what an SC <strong>does</strong> / <strong>does not</strong><br> apply to or say to<br><strong>fit your agenda</strong></p>
+        <p><small>whether you're a developer or an auditor doing an evaluation</small></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        <p>be conservative in your<br><strong>pass</strong> / <strong>fail</strong> assessments</p>
+        <p><small>document your hesitation, clearly state when something's "more of a suggestion" than a hard failure</small></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+<div>
+    <p><strong>further</strong> reading...</p>
+</div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+<h3>join my WCAG Trash Panda Webring:</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/pull/612">Fixes to WCAG 2.1 Understanding 2.4.6 and 3.3.2 #612</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/pull/890">Edits to 135 failure #890</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/901">Proposal for color and contrast (1.3.1, 1.4.1, 1.4.3., 1.4.6, 1.4.11) #901</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/857">Should role button and input button be a WCAG fail if cannot be activated using space? #857</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/541">Does SC 1.4.11 require comparing focused and non-focused states #541</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/750">Ambiguity in understanding for 1.3.3 sensory characteristics #750</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/755">Bad/incomplete example for Understanding 3.3.2 #755</a></li>
+</ul>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/635">"at least" should be "at most" in WCAG 2.1 SC 1.4.12 #635</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/698">Expand 1.4.10 to apply 'down to' instead of 'at' #698</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/302">2.4.7 Focus Visible - what counts as "visible"? #302</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/891">Must the tooltip of icons match the accessible name? (for "Label in Name", SC 2.5.3) #891</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/878">Keyboard operation with assistive technology: 2.1.1 or 4.1.2? #878</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/867#issuecomment-524531280">Can title on links (e.g. linked icon) as sole source of accName ever pass 1.1.1? #867 (side discussion about high contrast mode and reponsibility of user agents)</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/866">Error of the User Agents part of WCAG or not #866</a></li>
+</ul>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/773">1.4.5 / 1.4.9 Image of Text and &lt;text&gt; inside SVGs #773</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/795">Revisiting imbalance between 1.2.4 Captions (Live) (AA) and 1.2.9 Audio-only (Live) (AAA) #795</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/717">ARIA in HTML conformance to conform WCAG ? #717</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/704">Failure technique F94 (1.4.4 resize text): remove "1280 pixels wide" step in test procedure #704</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/695">Contrast Ratio Math and Related Visual Issues #695</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/665">Include font weight for color contrast tests #665</a></li>
+<li><a target="_blank" rel="noopener" href="https://webaim.org/discussion/mail_thread?thread=9174&id=39687#39687"> Accessible P Tag Usage (WebAim)</a></li>
+</ul>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <img src="./images/tpg-blue.svg" alt="The Paciello Group" width="250">
+    <p><a target="_blank" rel="noopener" href="https://twitter.com/patrick_h_lauke">@patrick_h_lauke</a><br>
+    <a target="_blank" rel="noopener" href="https://github.com/patrickhlauke/">github.com/patrickhlauke/</a><br>
+    <a target="_blank" rel="noopener" href="https://www.paciellogroup.com/">paciellogroup.com</a><br>
+    <a target="_blank" rel="noopener" href="https://www.splintered.co.uk/">splintered.co.uk</a><p>
+    <p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="images/cc-by-nc-sa.svg" width="150" alt="Creative Commons: Attribution Non-Commercial Share-Alike"></a></p>
+</div></section>
+
+    <!--
+        To hide progress bar from entire presentation
+        just remove “progress” element.
+        -->
+    <div class="progress"><div></div></div>
+    <script src="shower/shower.min.js"></script>
+</body>
+</html>
