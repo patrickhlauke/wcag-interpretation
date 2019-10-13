@@ -1,5 +1,36 @@
 h1,h2,h3,h4,h5,h6 { font-weight:bold; }
 
+strong {
+    white-space: nowrap;
+}
+
+hr {
+    border: 1px #FCB316 solid;
+    margin: 2em auto;
+}
+
+abbr {
+    text-decoration: underline dashed;
+}
+
+.slide p.context {
+    font-size: 0.55em;
+}
+
+.slide blockquote {
+	background: #eee;
+	padding: 0.05em 1.75em;
+}
+
+.slide q {
+    background: #eee;
+    padding: 0 0.5em;
+}
+
+.slide blockquote ul {
+    margin-bottom: 0;
+}
+
 .caption { color: #fff; }
 
 .list {
