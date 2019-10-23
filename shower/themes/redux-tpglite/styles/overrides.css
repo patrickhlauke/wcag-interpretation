@@ -31,6 +31,10 @@ abbr {
     margin-bottom: 0;
 }
 
+.slide blockquote ul li {
+    line-height: 1;
+}
+
 .caption { color: #fff; }
 
 .list {
