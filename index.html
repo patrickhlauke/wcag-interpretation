@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="shower/themes/redux-tpglite/styles/screen.css">
     <link rel="stylesheet" href="shower/themes/redux-tpglite/styles/overrides.css">
     <link rel="stylesheet" href="highlight/styles/sunburst.css">
-    <style>
-        #yougotthetouch.slide { background-color: #000; }
-    </style>
     <script src="highlight/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
@@ -37,7 +34,7 @@
     <h2>about me...</h2>
     <ul>
     <li>principal accessibility engineer at <a target="_blank" rel="noopener" href="https://www.paciellogroup.com/">The Paciello Group</a></li>
-    <li>occasional <a target="_blank">W3C AGWG</a> member</li>
+    <li>occasional W3C AGWG member</li>
     <li>WCAG <strong>trash panda</strong></li>
     <li>known for my rants, not my brevity...</li>
     </ul>
@@ -121,6 +118,7 @@
 <section class="slide statement"><div>
     <div>
         <p>WCAG is built on the idea that <strong>success criteria</strong> can be evaluated clearly, unambiguously and consistently...</p>
+        <p class="context">...but that's not always the case</p>
     </div>
 </div></section>
 
@@ -128,7 +126,7 @@
 
 <section class="slide statement"><div>
     <div>
-        <p>only a few <strong>representative examples</strong>...</p>
+        <p>only a few <strong>cherry-picked examples</strong>...</p>
         <p class="context">otherwise we'd be here a few more hours</p>
     </div>
 </div></section>
@@ -157,7 +155,7 @@
         <h2>2.4.6 <strong>Headings and Labels</strong> (AA)</h2>
         <blockquote><p>Headings and labels describe topic or purpose.</p></blockquote>
         <p>this <strong>doesn't</strong> mandate the use of headings and labels ... only that <strong>if</strong> a page uses headings and labels, they must be descriptive.</p>
-        <p>it also <strong>doesn't</strong> mandate that headings and labels be correctly marked-up - that's the job of <strong>1.3.1 Info and Relationships</strong> and (where it affects "accessible name" of the controls in question) <strong>4.1.2 Name, Role, Value</strong>).</p>
+        <p>it also <strong>doesn't</strong> mandate that headings and labels be correctly marked-up - that's the job of <strong>1.3.1 Info and Relationships</strong> and (where it affects "accessible name" of controls) <strong>4.1.2 Name, Role, Value</strong>).</p>
         <p>lastly, if labels aren't there, it's a <strong>3.3.2 Labels or Instructions</strong> problem.</p>
     </div>
 </div></section>
@@ -188,7 +186,7 @@
     <div>
         <h2>3.3.2 <strong>Labels or Instructions</strong> (A)</h2>
         <blockquote><p>Labels or instructions are provided when content requires user input.</p></blockquote>
-        <p>again, this <strong>doesn't</strong> mandate that labels be marked-up as <code>&lt;label&gt;</code> and properly associated with form controls - that's covered by <strong>1.3.1 Info and Relationships</strong> and (where it affects "accessible name" of the controls in question) <strong>4.1.2 Name, Role, Value</strong>.</p>
+        <p>again, this <strong>doesn't</strong> mandate that labels be marked-up as <code>&lt;label&gt;</code> and properly associated with form controls - that's covered by <strong>1.3.1 Info and Relationships</strong> and (where it affects "accessible name" of controls) <strong>4.1.2 Name, Role, Value</strong>.</p>
     </div>
 </div></section>
 
@@ -217,7 +215,7 @@
 <section class="slide listing"><div>
     <div>
         <h2>2.1.1 <strong>Keyboard</strong> (A)</h2>
-        <blockquote><p>All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.</p></blockquote>
+        <blockquote><p>All functionality of the content is operable through a keyboard interface [...]</p></blockquote>
         <p>doesn't say anything about <strong>which keys</strong> are needed to operate controls/functionality</p>
     </div>
 </div></section>
@@ -237,6 +235,7 @@
         <h2>3.2.3 <strong>Consistent Navigation</strong> (AA)</h2>
         <blockquote><p>Navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.</p></blockquote>
         <p>this only normatively requires the <strong>relative order</strong> of navigation (in relation to other page components) to be consistent - nothing more.</p>
+        <p>doesn't mandate that navigation should be same, work the same, etc across pages</p>
     </div>
 </div></section>
 
@@ -263,7 +262,7 @@
 <section class="slide listing"><div>
     <div>
         <h2>2.4.4 <strong>Link Purpose (In Context)</strong> (AA)</h2>
-        <blockquote><p>The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.</p></blockquote>
+        <blockquote><p>The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context [...]</p></blockquote>
         <p>but what about <strong>buttons</strong> or similar?</p>
     </div>
 </div></section>
@@ -273,8 +272,8 @@
 <section class="slide listing"><div>
     <div>
         <h2>4.1.2 <strong>Name, Role, Value</strong> (A)</h2>
-        <blockquote><p>For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.</p></blockquote>
-        <p>this only says it has to have a programmatically exposed accessible name, but <strong>doesn't</strong> mandate that the name needs to make sense / convey purpose</p>
+        <blockquote><p>For all user interface components [...] the name and role can be programmatically determined [...]</p></blockquote>
+        <p>buttons need to have a programmatically exposed accessible name, but <strong>doesn't</strong> mandate that the name needs to make sense / convey purpose</p>
     </div>
 </div></section>
 
@@ -286,9 +285,9 @@
     <p><strong>fails</strong> 2.4.4 Link Purpose (In Context)</p>
     <hr>
     <pre><code class="html">&lt;p&gt;...my amazing product...&lt;/p&gt;
-&lt;p&gt;&lt;button&gt;Read more&lt;/button&gt;&lt;/p&gt;</code></pre>
+&lt;p&gt;&lt;button&gt;Add to cart&lt;/button&gt;&lt;/p&gt;</code></pre>
     <p><strong>passes</strong> 4.1.2 Name, Role, Value and (arguably?) fails no criterion<br>
-    unless you want to drag out 2.4.5 <strong>Headings and Labels</strong>?</p>
+    unless you want to drag out 2.4.5 <strong>Headings and Labels</strong> because the label is not "descriptive"?<br> or 1.3.1 <strong>Info and Relationships</strong>?</p>
 </div></section>
 
 <!-- -->
@@ -304,8 +303,7 @@
 <section class="slide code listing"><div>
     <h2>cascade of fail</h2>
     <pre><code class="html">&lt;a href="..."&gt; &lt;img src="..."&gt; &lt;/a&gt;</code></pre>
-    <p>fails <strong>multiple criteria</strong>...need to consistently report these, but they're tedious.</p>
-    <p>if you already flagged it under the "main" failure(s), does the client <strong>really</strong> benefit from knowing all other ways in which this is wrong? just showing off your auditing acumen?</p>
+    <p>fails <strong>multiple criteria</strong>...need to consistently report these, but easy to forget and tedious to do...</p>
 </div></section>
 
 <!-- -->
@@ -313,12 +311,13 @@
 <section class="slide code listing"><div>
     <h2>"speculative" cascade of fail</h2>
     <pre><code class="html">&lt;div&gt;Read more&lt;/div&gt;</code></pre>
-    <p>fails 2.1.1 <strong>Keyboard</strong> ... arguably then also 4.1.2 <strong>Name, Role, Value</strong>?<br>and if it then is turned into a link, <em>also</em> 2.4.4 <strong>Link Purpose (In Context)</strong>?</p>
+    <p>fails 2.1.1 <strong>Keyboard</strong> ... but also 4.1.2 <strong>Name, Role, Value</strong></p>
+    <p>and if it acts as a link, <em>also</em> 2.4.4 <strong>Link Purpose (In Context)</strong>?</p>
 </div></section>
 
 <!-- -->
 
-<section class="slide impact"><div>
+<section class="slide statement"><div>
     <div>
         <p>auditor education / consistency problems...</p>
         <p class="context">internal training and resources can help</p>
@@ -366,11 +365,12 @@
 
 <section class="slide code listing"><div>
     <pre><code class="html">&lt;div class="footer"&gt; ... &lt;/div&gt;</code></pre>
-    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they don't use <code>&lt;footer&gt;</code> or <code>role="contentinfo"</code>?</p>
+    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they don't use <code>&lt;footer&gt;</code> or <code>role="contentinfo"</code>? is it not clear from context?</p>
     <hr>
-    <pre><code class="html">&lt;a href="/"&gt;home&lt;/p&gt; &lt;a href="..."&gt;products&lt;/a&gt;
- &lt;a href="..."&gt;contact&lt;/a&gt;</code></pre>
-    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they didn't wrap this in a <code>&lt;ul&gt;</code> even when styled ?</p>
+    <pre><code class="html">&lt;a href="/"&gt;home&lt;/p&gt;
+&lt;a href="..."&gt;products&lt;/a&gt;
+&lt;a href="..."&gt;contact&lt;/a&gt;</code></pre>
+    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they didn't wrap this in a <code>&lt;ul&gt;</code> even when styled as an inline set of three links?</p>
 </div></section>
 
 <!-- -->
@@ -450,7 +450,7 @@
         <h2>1.4.11 <strong>Non-text Contrast</strong> (AA)</h2>
         <blockquote><p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):</p>
         <ul>
-            <li>User Interface Components: Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author</li>
+            <li>User Interface Components: Visual information required to identify user interface components and states [...]</li>
             <li>Graphical Objects: [...]</li>
         </ul>
         </blockquote>
@@ -472,10 +472,7 @@
     <div>
         <h2>1.4.11 <strong>Non-text Contrast</strong> (AA)</h2>
         <blockquote><p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):</p>
-        <ul>
-            <li>User Interface Components: Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author</li>
-            <li>Graphical Objects: [...]</li>
-        </ul>
+        <p>[...]</p>
         </blockquote>
         <p>note that this only applies normatively to <strong>adjacent</strong> colors ... <strong>doesn't</strong> apply to contrast between different colors used for states of the same control</p>
     </div>
@@ -505,7 +502,7 @@
     <div>
         <img src="images/focus2.png" alt="Two identical looking 'Sign in' buttons - the one on the left is light green, the one on the right light gray">
         <p><strong>passes</strong> 1.4.11 Non-text Contrast.</p>
-        <p class="context"></p>but wait, does it fail 1.4.1 <strong>Use of Color</strong>?</p>
+        <p>but wait, does it fail 1.4.1 <strong>Use of Color</strong>?</p>
     </div>
 </div></section>
 
@@ -565,9 +562,9 @@
             <li>Vertical scrolling content <strong>at a width</strong> equivalent to 320 CSS pixels</li>
             <li>Horizontal scrolling content <strong>at a height</strong> equivalent to 256 CSS pixels</li>
         </ul>
-        <p>Except for parts of the content which require two-dimensional layout for usage or meaning.</p>
+        <p>[...]</p>
         </blockquote>
-        <p>didn't want to mandate responsive approach, but ended up too specific - only normatively applies at those <strong>exact values</strong></p>
+        <p>meant to help low vision users that require up to 400% zoom, but ended up too specific - only normatively applies at those <strong>exact values</strong></p>
     </div>
 </div></section>
 
@@ -604,7 +601,7 @@
 <section class="slide"><div>
     <div>
         <img src="images/textspacing.png" alt="Screenshots from a text spacing example where text content is cut off in a container *except* when line height is *exactly* at 1.5">
-        <p><small><code>if (styles.getPropertyValue('line-height') / styles.getPropertyValue('font-size')) >= 1.5 { ... } </code></small></p>
+        <p>use JavaScript to detect line height and fix <strong>only if 1.5 or higher</strong></p>
         <p><a href="https://codepen.io/patrickhlauke/pen/jgVGOp">codepen.io/patrickhlauke/pen/jgVGOp</a></p>
     </div>
 </div></section>
@@ -614,7 +611,7 @@
 <section class="slide statement"><div>
     <div>
         <p>even after years of auditing,<br>I sometimes have weird <strong>moments of realisation</strong></p>
-        <p class="context">seeing SCs, and what the say/apply to, in a new light</p>
+        <p class="context">seeing SCs, and what they say/apply to, in a new light</p>
     </div>
 </div></section>
 
@@ -644,10 +641,19 @@
 
 <!-- -->
 
-<section class="slide impact"><div>
+<section class="slide"><div>
     <div>
-        <p>WCAG SCs are <strong>binary</strong> ...<br>
-        you either<br>
+        <img src="images/reflow.png" alt="Screenshots from a reflow example where there are both horizontal and vertical scrollbars at any window size *except* when *exactly* at 320 CSS pixel width">
+        <p><code>@media (<strong>width: 320px</strong>) { ... }</code></p>
+        <p><a href="https://codepen.io/patrickhlauke/pen/ZZqzaB">codepen.io/patrickhlauke/pen/ZZqzaB</a></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <p>WCAG SCs are <strong>binary</strong><br>you either<br>
         <strong>pass</strong> or <strong>fail</strong></p>
     </div>
 </div></section>
@@ -657,7 +663,7 @@
 <section class="slide"><div>
     <div>
         <img src="images/color-contrast-comparison.png" alt="Color Contrast Analyser, showing that #777777 on #FFFFFF fails with contrast just below 4.5:1, but #767677 on #FFFFFF passes at exactly 4.5:1 - but visually the two greys are indistinguishable">
-        <p>sometimes the values are just <strong>lines in the sand</strong>...</p>
+        <p>sometimes the values/thresholds are just arbitrary <strong>lines in the sand</strong>...</p>
     </div>
 </div></section>
 
@@ -707,7 +713,18 @@
 
 <section class="slide"><div>
     <div>
-        <img class="cover" src="images/statler-and-waldorf.gif" alt="Animation loop from the Muppet Show - Statler and Waldorf in their balcony seat">
+        <img src="images/color-contrast-comparison.png" alt="Color Contrast Analyser, showing that #777777 on #FFFFFF fails with contrast just below 4.5:1, but #767677 on #FFFFFF passes at exactly 4.5:1 - but visually the two greys are indistinguishable">
+        <p>sometimes the values are just <strong>lines in the sand</strong>...</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img src="images/github-w3c-wcag.png" alt="Screenshot of W3C WCAG GitHub repository issues">
+        <p>join the debate/discussion (more open nowadays)</p>
+        <p><a href="https://github.com/w3c/wcag/issues">github.com/w3c/wcag/issues</a></p>
     </div>
 </div></section>
 
@@ -755,12 +772,8 @@
 <section class="slide"><div>
     <div>
         <img src="images/w3c-silver-scoring-example.png" alt="Screenshot of one of the proposed scoring examples ... utterly confusing spreadsheet of points, weighting of issues, etc.">
-    </div>
-</div></section>
-
 <!-- -->
 
-<section class="slide impact"><div>
     <div>
         <p>...in the meantime though...</p>
     </div>
