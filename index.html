@@ -165,9 +165,11 @@
 
 <section class="slide code listing"><div>
     <pre><code class="html">&lt;input type="text"&gt;</code></pre>
-    <p><strong>passes</strong> 2.4.6 Headings and Labels</p>
-    <p><strong>fails</strong> 3.3.2 Labels or Instructions</p>
-    <p><strong>fails</strong> 4.1.2 Name, Role, Value</p>
+    <ul>
+        <li><strong>passes</strong> 2.4.6 Headings and Labels</li>
+        <li><strong>fails</strong> 3.3.2 Labels or Instructions</li>
+        <li><strong>fails</strong> 4.1.2 Name, Role, Value</li>
+    </ul>
 </div></section>
 
 <!-- -->
@@ -176,11 +178,13 @@
     <pre><code class="html">&lt;p class="heading1"&gt;I'm a heading&lt;/p&gt;
 &lt;p&gt;First name&lt;/p&gt;
 &lt;input type="text"&gt;</code></pre>
-    <p><strong>passes</strong> 2.4.6 Headings and Labels</p>
-    <p><strong>fails</strong> 1.3.1 Info and Relationships</p>
-    <p><strong>fails</strong> 4.1.2 Name, Role, Value</p>
-</div></section>
-
+    <ul>
+        <li><strong>passes</strong> 2.4.6 Headings and Labels</li>
+        <li><strong>fails</strong> 1.3.1 Info and Relationships</li>
+        <li><strong>fails</strong> 4.1.2 Name, Role, Value</li>
+    </ul>
+</div></section></ul>
+</ul>
 <!-- -->
 
 <section class="slide listing"><div>
@@ -196,9 +200,11 @@
 <section class="slide code listing"><div>
     <pre><code class="html">&lt;p&gt;First name&lt;/p&gt;
 &lt;input type="text"&gt;</code></pre>
-    <p><strong>passes</strong> 3.3.2 Labels or Instructions</p>
-    <p><strong>fails</strong> 4.1.2 Name, Role, Value</p>
-    <p><strong>fails</strong> 1.3.1 Info and Relationships</p>
+    <ul>
+        <li><strong>passes</strong> 3.3.2 Labels or Instructions</li>
+        <li><strong>fails</strong> 4.1.2 Name, Role, Value</li>
+        <li><strong>fails</strong> 1.3.1 Info and Relationships</li>
+    </ul>
 </div></section>
 
 <!-- -->
@@ -206,9 +212,11 @@
 <section class="slide code listing"><div>
     <pre><code class="html">&lt;p&gt;First name&lt;/p&gt;
 &lt;input type="text" <mark>aria-label="First name"</mark>&gt;</code></pre>
-    <p><strong>passes</strong> 3.3.2 Labels or Instructions</p>
-    <p><strong>passes</strong> 4.1.2 Name, Role, Value</p>
-    <p><strong>passes</strong> (arguably) 1.3.1 Info and Relationships</p>
+    <ul>
+        <li><strong>passes</strong> 3.3.2 Labels or Instructions</li>
+        <li><strong>passes</strong> 4.1.2 Name, Role, Value</li>
+        <li><strong>passes</strong> (arguably) 1.3.1 Info and Relationships</li>
+    </ul>
 </div></section>
 
 <!-- -->
@@ -225,7 +233,9 @@
 
 <section class="slide code listing"><div>
     <pre><code class="html">&lt;a href="#" onclick="..." role="button"&gt;fake button&lt;/a&gt;</code></pre>
-    <p><strong>passes</strong> 2.1.1 Keyboard</p>
+    <ul>
+        <li><strong>passes</strong> 2.1.1 Keyboard</li>
+    </ul>
     <p>even though it doesn't respond to <kbd>SPACE</kbd> like real button would</p>
 </div></section>
 
@@ -283,12 +293,16 @@
 <section class="slide code listing"><div>
     <pre><code class="html">&lt;p&gt;...my amazing article...&lt;/p&gt;
 &lt;p&gt;&lt;a href="..."&gt;Read more&lt;/a&gt;&lt;/p&gt;</code></pre>
-    <p><strong>fails</strong> 2.4.4 Link Purpose (In Context)</p>
+    <ul>
+        <li><strong>fails</strong> 2.4.4 Link Purpose (In Context)</li>
+    </ul>
     <hr>
     <pre><code class="html">&lt;p&gt;...my amazing product...&lt;/p&gt;
 &lt;p&gt;&lt;button&gt;Add to cart&lt;/button&gt;&lt;/p&gt;</code></pre>
-    <p><strong>passes</strong> 4.1.2 Name, Role, Value and (arguably?) fails no criterion<br>
-    unless you want to drag out 2.4.6 <strong>Headings and Labels</strong> because the label is not "descriptive"?<br> or 1.3.1 <strong>Info and Relationships</strong>?</p>
+    <ul>
+        <li><strong>passes</strong> 4.1.2 Name, Role, Value</li>
+    </ul>
+    <p>and <em>arguably</em> fails no other criterion, unless you want to drag out 2.4.6 <strong>Headings and Labels</strong> because the label is not "descriptive"?<br> or 1.3.1 <strong>Info and Relationships</strong>?</p>
 </div></section>
 
 <!-- -->
@@ -304,16 +318,13 @@
 <section class="slide code listing"><div>
     <h2>cascade of fail</h2>
     <pre><code class="html">&lt;a href="..."&gt; &lt;img src="..."&gt; &lt;/a&gt;</code></pre>
-    <p>fails <strong>multiple criteria</strong>...need to consistently report these, but easy to forget and tedious to do...</p>
-</div></section>
-
-<!-- -->
-
-<section class="slide code listing"><div>
-    <h2>"speculative" cascade of fail</h2>
-    <pre><code class="html">&lt;div&gt;Read more&lt;/div&gt;</code></pre>
-    <p>fails 2.1.1 <strong>Keyboard</strong> ... but also 4.1.2 <strong>Name, Role, Value</strong></p>
-    <p>and if it acts as a link, <em>also</em> 2.4.4 <strong>Link Purpose (In Context)</strong>?</p>
+    <p>fails <strong>multiple criteria</strong>, in sequence:</p>
+    <ul>
+        <li>the image itself <strong>fails</strong> 1.1.1 Non-text content</li>
+        <li>as a result, link lacks accessible name and <strong>fails</strong> 4.1.2 Name, Role, Value</li>
+        <li><em>arguably</em>, link also <strong>fails</strong> 2.4.4 Link Purpose (In Context)</li>
+    </ul>
+    <p>need consistency in how this is reported</p>
 </div></section>
 
 <!-- -->
@@ -366,12 +377,18 @@
 
 <section class="slide code listing"><div>
     <pre><code class="html">&lt;div class="footer"&gt; ... &lt;/div&gt;</code></pre>
-    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they don't use <code>&lt;footer&gt;</code> or <code>role="contentinfo"</code>? is it not clear from context?</p>
-    <hr>
+    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they don't use <code>&lt;footer&gt;</code> or <code>role="contentinfo"</code>?</p>
+    <p>the footer may be styled differently from the rest of the page, but is its purpose not clear from context?</p>
+</div></section>
+
+<!-- -->
+
+<section class="slide code listing"><div>
+    <img src="images/links.png" alt="Three links, presented on a single line, separated by slashes">
     <pre><code class="html">&lt;a href="/"&gt;home&lt;/a&gt;
 &lt;a href="..."&gt;products&lt;/a&gt;
 &lt;a href="..."&gt;contact&lt;/a&gt;</code></pre>
-    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they didn't wrap this in a <code>&lt;ul&gt;</code> even when styled as an inline set of three links?</p>
+    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they didn't wrap this in a <code>&lt;ul&gt;</code>, even if this isn't <q>conveyed through presentation</q>?</p>
 </div></section>
 
 <!-- -->
@@ -523,8 +540,14 @@
     <div>
         <h2>F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision</h2>
         <blockquote><p>Note 1: Red and Pink are the same color (hue) but they have different lightness (which is not color). So red and pink would pass the requirement for "not distinguished by color (hue) alone" since they differ by lightness (which is not color) - as long as the difference in lightness (contrast) is 3:1 or greater</p></blockquote>
-        <p>WAT?</p>
+        <p>a note buried in a non-normative technique redefining what "color" means?</p>
     </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+ [@COMMENT: add comment that this has now been moved at least to understanding doc]
 </div></section>
 
 <!-- -->
@@ -539,8 +562,35 @@
 
 <section class="slide statement"><div>
     <div>
-        <p>...but we'll fix it in <strong>WCAG 2.2</strong> (?)</p>
-        <p class="context">2.4.11 <strong>Focus Visible Enhanced</strong> (Level AA)</p>
+        <p>...but we'll fix focus WCAG 2.2</p>
+        <p class="context">2.4.11 <strong> Focus Appearance (Minimum)</strong> (Level AA)</p>
+        <p class="context">2.4.12 <strong> Focus Appearance (Enhanced)</strong> (Level AAA)</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        <p>SCs that are interpreted as their <strong>opposites</strong></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>1.4.1 <strong>Use of Color</strong> (A)</h2>
+        <blockquote><p>Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</p></blockquote>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img src="images/use-of-color-links.png" alt="Two lines of black text, both containing a link each; the links aren't underlines; in the first line, the link is blue, while in the second line the link is black just like the text (and not discernible at all visually)">
+        <p>both lines contain a link. but only in the first line does the link fail 1.4.1</p>
     </div>
 </div></section>
 
@@ -749,9 +799,8 @@
 
 <section class="slide"><div>
     <div>
-        <img src="images/w3c-silver-tf.png" alt="Screenshot of W3C Silver Task Force of the AGWG page">
-        <p>the next generation of accessibility guidelines...</p>
-        <p><a href="https://w3.org/WAI/GL/task-forces/silver">w3.org/WAI/GL/task-forces/silver</a></p>
+        <img src="images/github-canaxess-wcag.png" alt="Screenshot of the Canaxess wcag-tests GitHub repository">
+        <p><a href="https://github.com/canaxess/wcag-tests">github.com/canaxess/wcag-tests</a></p>
     </div>
 </div></section>
 
@@ -759,9 +808,17 @@
 
 <section class="slide"><div>
     <div>
-        <img src="images/w3c-silver-scoring.png" alt="Screenshot of W3C Silver Task Force wiki's conformance section">
-        <p>moving away from binary pass/fail conformance (or trying)</p>
-        <p><a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page#Silver_Conformance">www.w3.org/.../#Silver_Conformance</a></p>
+        <img src="images/canaxess-wcag.png" alt="Screenshot of part of the Canaxess Web Content Accessibility Guidelines (WCAG) Checklist">
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img src="images/w3c-silver-tf.png" alt="Screenshot of W3C Silver Task Force of the AGWG page">
+        <p>the next generation of accessibility guidelines...</p>
+        <p><a href="https://w3.org/WAI/GL/task-forces/silver">w3.org/WAI/GL/task-forces/silver</a></p>
     </div>
 </div></section>
 
