@@ -5,7 +5,7 @@ strong {
 }
 
 hr {
-    border: 1px #FCB316 solid;
+    border: 1px #FF1958 solid;
     margin: 2em auto;
 }
 
@@ -18,12 +18,13 @@ abbr {
 }
 
 .slide blockquote {
-	background: #eee;
-	padding: 0.05em 1.75em;
+	background: #B6A7BD66;
+	padding: 0.05em 1.75em 0.5em 1.75em;
+	margin: 1.5em 0;
 }
 
 .slide q {
-    background: #eee;
+    background: #B6A7BD66;
     padding: 0 0.5em;
 }
 
@@ -117,20 +118,20 @@ abbr {
 
 .slide ul li::before {
 	content: "\25AA\00A0\00A0\2009"; /* square */
-	color: #46BFCE; /* not a corporate color, but it's what the powerpoint template uses - can also use #0ff on dark for even better contrast? */
+	color: #FF1958;
 	font-weight: bold;
 }
 
 .slide ol li:before {
-	color: #1C75BC;
+	color: #420065;
 }
 
 .slide.impact ol li:before {
-	color: #0FF;
+	color: #FF1958;
 }
 
 .slide.statement ol li:before {
-	color: #0FF;
+	color: #FF1958;
 }
 
 .slide small {
@@ -149,12 +150,8 @@ abbr {
 	line-height: 1.25;
 }
 
-.slide.impact {
-	background: #4AA0B1;
-}
-
 .slide.statement strong {
-	color: #66D9EF;
+	color: #FF1958;
 	background: none;
 }
 
@@ -194,6 +191,7 @@ abbr {
 .slide.title img {
 	position: relative;
 	display: inline;
+	margin-bottom: 1.25em;
 }
 
 .slide.title h1 {
@@ -230,7 +228,7 @@ pre code.html { text-align:left; }
 /* title slide */
 
 .slide.title {
-	background: #1C75BC;
+	background: #420065;
 	color: #fff;
 }
 
@@ -244,7 +242,7 @@ pre code.html { text-align:left; }
 }
 
 .slide.title strong {
-	color: #1C75BC;
+	color: #420065;
 	background: #fff;
 	padding: 0 0.25em;
 }
@@ -283,23 +281,31 @@ pre code.html { text-align:left; }
 }
 
 .slide h2, .slide h3, .slide h4, .slide h5, .slide h6 {
-	color: #1C75BC;
+	color: #A900C0;
+}
+
+.slide.code h2, .slide.code h3, .slide.code h4, .slide.code h5, .slide.code h6 {
+	color: #FF1958;
 }
 
 .slide a {
-	color: #2B8790;
+	color: #A900C0;
 	text-decoration: none;
-	border-bottom: #2B879066 0.05em solid;
+	border-bottom: #A900C066 0.05em solid;
 }
 
 .slide a:focus, .slide a:hover, .slide a:active {
-	border-bottom: #2B8790ee 0.05em solid;
+	border-bottom: #A900C0ee 0.05em solid;
 }
 
 .slide strong {
-	background: #1C75BC;
+	background: #A900C0;
 	color: #fff;
 	padding: 0 0.25em;
+}
+
+.slide.code strong {
+	background: #FF1958;
 }
 
 
@@ -319,7 +325,7 @@ pre code.html { text-align:left; }
 
 
 .slide.impact {
-	background: #1C75BC;
+	background: #420065;
 	color: #fff;
 }
 
@@ -339,7 +345,7 @@ pre code.html { text-align:left; }
 
 .slide.impact strong {
 	background: #fff;
-	color: #1C75BC;
+	color: #420065;
 }
 
 
@@ -364,14 +370,14 @@ pre code.html { text-align:left; }
 }
 
 .slide.statement strong {
-	background: #2B8790;
+	background: #A900C0;
 	color: #fff;
 }
 
 .slide blockquote:before {
-    color: #ABABAB;
+    color: #E100A0;
     content: '\201C';
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: bold;
 }
 
@@ -387,15 +393,18 @@ pre code.html { text-align:left; }
 /* override for highlight.js */
 code.hljs { overflow-x: visible !important; }
 
+.progress div { background: #A900C0 !important; }
+.slide h2 { font-size: 36px !important; }
+.slide blockquote:before{ margin:-30px 0 0 -75px !important; }
+.slide kbd, .slide code, .slide samp { background: #B6A7BD66; }
+
+
 /* 
-TPG Blue #1C75BC rgb(28, 117, 188)
-TPG Gold #FCB316 rgb(252, 179, 22)
-TPG Grey #6D6E71 rgb(109, 110, 113)
+TetraLogical deep purple: #420065
+TetraLogical purple (inclusive): #A900C0
+TetraLogical pink (ethical): #E100A0
+TetraLogical orange (safe): #F56F00
+TetraLogical red-ish (sustainable): #FF1958
 
-Cherry Red #8F2653 rgb(143, 38, 83)
-Purple #6239B4 rgb(98, 57, 180)
-Aqua #2B8790 rgb(43, 135, 144)
-Grey Tint #DFDFDF rgb(223, 223, 223)
-
-Powerpoint bullet point square #46BFCE / #0FF on dark/normal slide
+TetraLogical purple-gray: #B6A7BD / tint #B6A7BD66
 */

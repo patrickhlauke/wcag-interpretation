@@ -21,7 +21,7 @@
 
 <section class="slide title" id="title"><div>
     <div class="titlestrap">
-        <img src="./images/tpg-white.svg" alt="The Paciello Group" width="250">
+        <img src="./images/tetralogical-white.svg" alt="TetraLogical" width="150">
         <h1>These <strong>aren't</strong> the <abbr title="Success Criteria">SC</abbr>s you're looking for...</h1>
         <p>(mis)adventures in WCAG 2.x interpretation and audits</p>
     </div>
@@ -33,10 +33,10 @@
 <section class="slide listing"><div>
     <h2>about me...</h2>
     <ul>
-    <li>principal accessibility engineer at <a target="_blank" rel="noopener" href="https://www.paciellogroup.com/">The Paciello Group</a></li>
+    <li>principal accessibility specialist at <a target="_blank" rel="noopener" href="https://www.tetralogical.com/">TetraLogical</a></li>
+    <li>previously at The Paciello Group (now TPGi)</li>
     <li>occasional W3C AGWG member</li>
     <li>WCAG <strong>trash panda</strong></li>
-    <li>known for my rants, not my brevity...</li>
     </ul>
 </div></section>
 
@@ -47,7 +47,7 @@
     <ul>
         <li>doing accessibility audits</li>
         <li>advising and reviewing the work of other engineers doing audits</li>
-        <li>being active on accessibility mailing lists (WebAIM, W3C, ...)</li>
+        <li>being active on accessibility mailing lists (WebAIM, W3C, ...), twitter, Slack</li>
     </ul>
     <p>...and far too often, <strong>the same question always bubbles up</strong></p>
 </div></section>
@@ -65,14 +65,6 @@
 <section class="slide"><div>
     <div>
         <img class="cover pixelated" src="images/fail-all-the-things.png" alt="Meme picture: FAIL ALL THE THINGS">
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide impact"><div>
-    <div>
-        <p>...it depends™</p>
     </div>
 </div></section>
 
@@ -162,26 +154,6 @@
 
 <!-- -->
 
-<section class="slide code listing"><div>
-    <pre><code class="html">&lt;input type="text"&gt;</code></pre>
-    <p><strong>passes</strong> 2.4.6 Headings and Labels</p>
-    <p><strong>fails</strong> 3.3.2 Labels or Instructions</p>
-    <p><strong>fails</strong> 4.1.2 Name, Role, Value</p>
-</div></section>
-
-<!-- -->
-
-<section class="slide code listing"><div>
-    <pre><code class="html">&lt;p class="heading1"&gt;I'm a heading&lt;/p&gt;
-&lt;p&gt;First name&lt;/p&gt;
-&lt;input type="text"&gt;</code></pre>
-    <p><strong>passes</strong> 2.4.6 Headings and Labels</p>
-    <p><strong>fails</strong> 1.3.1 Info and Relationships</p>
-    <p><strong>fails</strong> 4.1.2 Name, Role, Value</p>
-</div></section>
-
-<!-- -->
-
 <section class="slide listing"><div>
     <div>
         <h2>3.3.2 <strong>Labels or Instructions</strong> (A)</h2>
@@ -193,21 +165,51 @@
 <!-- -->
 
 <section class="slide code listing"><div>
-    <pre><code class="html">&lt;p&gt;First name&lt;/p&gt;
-&lt;input type="text"&gt;</code></pre>
-    <p><strong>passes</strong> 3.3.2 Labels or Instructions</p>
-    <p><strong>fails</strong> 4.1.2 Name, Role, Value</p>
-    <p><strong>fails</strong> 1.3.1 Info and Relationships</p>
+    <pre><code class="html">&lt;p class="heading1"&gt;More information&lt;/p&gt;</code></pre>
+    <ul>
+        <li><strong>passes</strong> 2.4.6 Headings and Labels</li>
+        <li><strong>fails</strong> 1.3.1 Info and Relationships</li>
+    </ul>
+</div></section>
+
+<!-- -->
+
+<section class="slide code listing"><div>
+    <pre><code class="html">&lt;input type="text"&gt;</code></pre>
+    <ul>
+        <li><strong>passes</strong> 2.4.6 Headings and Labels</li>
+        <li><strong>fails</strong> 3.3.2 Labels or Instructions</li>
+        <li><strong>fails</strong> 4.1.2 Name, Role, Value</li>
+    </ul>
 </div></section>
 
 <!-- -->
 
 <section class="slide code listing"><div>
     <pre><code class="html">&lt;p&gt;First name&lt;/p&gt;
+&lt;input type="text"&gt;</code></pre>
+    <ul>
+        <li><strong>passes</strong> 2.4.6 Headings and Labels</li>
+        <li><strong>passes</strong> 3.3.2 Labels or Instructions</li>
+        <li><strong>fails</strong> 1.3.1 Info and Relationships</li>
+        <li><strong>fails</strong> 2.5.3 Label in Name</li>
+        <li><strong>fails</strong> 4.1.2 Name, Role, Value</li>
+    </ul>
+</div></section></ul>
+</ul>
+
+<!-- -->
+
+<section class="slide code listing"><div>
+    <pre><code class="html">&lt;p&gt;First name&lt;/p&gt;
 &lt;input type="text" <mark>aria-label="First name"</mark>&gt;</code></pre>
-    <p><strong>passes</strong> 3.3.2 Labels or Instructions</p>
-    <p><strong>passes</strong> 4.1.2 Name, Role, Value</p>
-    <p><strong>passes</strong> (arguably) 1.3.1 Info and Relationships</p>
+    <ul>
+        <li><strong>passes</strong> 2.4.6 Headings and Labels</li>
+        <li><strong>passes</strong> 3.3.2 Labels or Instructions</li>
+        <li><strong>passes</strong> 2.5.3 Label in Name</li>
+        <li><strong>passes</strong> 4.1.2 Name, Role, Value</li>
+        <li><strong>passes</strong> (arguably) 1.3.1 Info and Relationships</li>
+    </ul>
 </div></section>
 
 <!-- -->
@@ -224,8 +226,23 @@
 
 <section class="slide code listing"><div>
     <pre><code class="html">&lt;a href="#" onclick="..." role="button"&gt;fake button&lt;/a&gt;</code></pre>
-    <p><strong>passes</strong> 2.1.1 Keyboard</p>
+    <ul>
+        <li><strong>passes</strong> 2.1.1 Keyboard</li>
+    </ul>
     <p>even though it doesn't respond to <kbd>SPACE</kbd> like real button would</p>
+</div></section>
+
+<!-- -->
+
+<section class="slide code listing"><div>
+    <pre><code class="html">&lt;a href="#" role="button"&gt;Activate using 'b'&lt;/a&gt;</code></pre>
+    <pre><code class="js">.addEventListener('keypress', function(e) {
+    if (e.key == 'b') { /* do something */ }
+})</code></pre>
+    <ul>
+        <li><strong>passes</strong> 2.1.1 Keyboard</li>
+    </ul>
+    <p>even though it can only be triggered using the letter <kbd>b</kbd></p>
 </div></section>
 
 <!-- -->
@@ -246,6 +263,7 @@
         <h2>1.3.3 <strong>Sensory Characteristics</strong> (A)</h2>
         <blockquote><p>Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.</p></blockquote>
         <p>this only relates specifically to <strong>instructions</strong> ... and <strong>not</strong> whether or not sensory characteristics are used - this is covered by other SCs, like <strong>1.4.1 Use of Color</strong> or even <strong>1.1.1 Non-Text Content</strong>.</p>
+        <p><small><a href="https://github.com/w3c/wcag/pull/767" target="_blank">Fixes for Understanding 1.3.3 Sensory Characteristics #767</a></small></p>
     </div>
 </div></section>
 
@@ -253,7 +271,7 @@
 
 <section class="slide impact"><div>
     <div>
-        WCAG has a few strange <strong>omissions</strong>...
+        <p>SCs that are interpreted as their <strong>opposites</strong></p>
     </div>
 </div></section>
 
@@ -261,33 +279,13 @@
 
 <section class="slide listing"><div>
     <div>
-        <h2>2.4.4 <strong>Link Purpose (In Context)</strong> (AA)</h2>
-        <blockquote><p>The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context [...]</p></blockquote>
-        <p>but what about <strong>buttons</strong> or similar?</p>
+        <h2>1.4.1 <strong>Use of Color</strong> (A)</h2>
+        <blockquote><p>Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</p></blockquote>
+        <img src="images/use-of-color-links.png" alt="Two lines of black text, both containing a link each; the links aren't underlines; in the first line, the link is blue, while in the second line the link is black just like the text (and not discernible at all visually)">
+        <p>both lines contain a link. but only in the first line is <strong>colour</strong> used.</p>
+        <p>the first cases <strong>fails</strong> 1.4.1 Use of Color, but the second <strong>passes</strong></strong></p>
+        <p>yes, it's rubbish, but no, can't argue that "color is used to convey..."</p>
     </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <div>
-        <h2>4.1.2 <strong>Name, Role, Value</strong> (A)</h2>
-        <blockquote><p>For all user interface components [...] the name and role can be programmatically determined [...]</p></blockquote>
-        <p>buttons need to have a programmatically exposed accessible name, but <strong>doesn't</strong> mandate that the name needs to make sense / convey purpose</p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide code listing"><div>
-    <pre><code class="html">&lt;p&gt;...my amazing article...&lt;/p&gt;
-&lt;p&gt;&lt;a href="..."&gt;Read more&lt;/a&gt;&lt;/p&gt;</code></pre>
-    <p><strong>fails</strong> 2.4.4 Link Purpose (In Context)</p>
-    <hr>
-    <pre><code class="html">&lt;p&gt;...my amazing product...&lt;/p&gt;
-&lt;p&gt;&lt;button&gt;Add to cart&lt;/button&gt;&lt;/p&gt;</code></pre>
-    <p><strong>passes</strong> 4.1.2 Name, Role, Value and (arguably?) fails no criterion<br>
-    unless you want to drag out 2.4.6 <strong>Headings and Labels</strong> because the label is not "descriptive"?<br> or 1.3.1 <strong>Info and Relationships</strong>?</p>
 </div></section>
 
 <!-- -->
@@ -303,16 +301,13 @@
 <section class="slide code listing"><div>
     <h2>cascade of fail</h2>
     <pre><code class="html">&lt;a href="..."&gt; &lt;img src="..."&gt; &lt;/a&gt;</code></pre>
-    <p>fails <strong>multiple criteria</strong>...need to consistently report these, but easy to forget and tedious to do...</p>
-</div></section>
-
-<!-- -->
-
-<section class="slide code listing"><div>
-    <h2>"speculative" cascade of fail</h2>
-    <pre><code class="html">&lt;div&gt;Read more&lt;/div&gt;</code></pre>
-    <p>fails 2.1.1 <strong>Keyboard</strong> ... but also 4.1.2 <strong>Name, Role, Value</strong></p>
-    <p>and if it acts as a link, <em>also</em> 2.4.4 <strong>Link Purpose (In Context)</strong>?</p>
+    <p>fails <strong>multiple criteria</strong>, in sequence:</p>
+    <ul>
+        <li>the image itself <strong>fails</strong> 1.1.1 Non-text content</li>
+        <li>as a result, link lacks accessible name and <strong>fails</strong> 4.1.2 Name, Role, Value</li>
+        <li><em>arguably</em>, link also <strong>fails</strong> 2.4.4 Link Purpose (In Context)</li>
+    </ul>
+    <p>need consistency in how this is reported</p>
 </div></section>
 
 <!-- -->
@@ -338,7 +333,7 @@
 <section class="slide statement"><div>
     <div>
         <p>WCAG 2.x is <strong>not perfect</strong></p>
-        <p class="context">written by well-meaning, but fallible humans (after all)</p>
+        <p class="context">written by well-meaning, but fallible humans...</p>
     </div>
 </div></section>
 
@@ -365,19 +360,71 @@
 
 <section class="slide code listing"><div>
     <pre><code class="html">&lt;div class="footer"&gt; ... &lt;/div&gt;</code></pre>
-    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they don't use <code>&lt;footer&gt;</code> or <code>role="contentinfo"</code>? is it not clear from context?</p>
-    <hr>
+    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they don't use <code>&lt;footer&gt;</code> or <code>role="contentinfo"</code>?</p>
+    <p>the footer may be styled differently from the rest of the page, but is its purpose not clear from context?</p>
+</div></section>
+
+<!-- -->
+
+<section class="slide code listing"><div>
+    <img src="images/links.png" alt="Three links, presented on a single line, separated by slashes">
     <pre><code class="html">&lt;a href="/"&gt;home&lt;/a&gt;
 &lt;a href="..."&gt;products&lt;/a&gt;
 &lt;a href="..."&gt;contact&lt;/a&gt;</code></pre>
-    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they didn't wrap this in a <code>&lt;ul&gt;</code> even when styled as an inline set of three links?</p>
+    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they didn't wrap this in a <code>&lt;ul&gt;</code>, even if this isn't <q>conveyed through presentation</q>?</p>
 </div></section>
 
 <!-- -->
 
 <section class="slide impact"><div>
     <div>
-        "I think what the <strong>founding fathers</strong> of WCAG meant to say..."
+        WCAG has a few strange <strong>omissions</strong>...
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>2.4.4 <strong>Link Purpose (In Context)</strong> (AA)</h2>
+        <blockquote><p>The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context [...]</p></blockquote>
+        <p>but what about <strong>buttons</strong> or similar?</p>
+        <p>is perhaps covered by <strong>4.1.2 Name, Role, Value</strong>?</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>4.1.2 <strong>Name, Role, Value</strong> (A)</h2>
+        <blockquote><p>For all user interface components [...] the name and role can be programmatically determined [...]</p></blockquote>
+        <p>buttons need to have a programmatically exposed accessible name, but <strong>doesn't</strong> mandate that the name needs to make sense / convey purpose</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide code listing"><div>
+    <pre><code class="html">&lt;p&gt;...my amazing article...&lt;/p&gt;
+&lt;p&gt;&lt;a href="..."&gt;Read more&lt;/a&gt;&lt;/p&gt;</code></pre>
+    <ul>
+        <li><strong>fails</strong> 2.4.4 Link Purpose (In Context)</li>
+    </ul>
+    <hr>
+    <pre><code class="html">&lt;p&gt;...my amazing product...&lt;/p&gt;
+&lt;p&gt;&lt;button&gt;Add to cart&lt;/button&gt;&lt;/p&gt;</code></pre>
+    <ul>
+        <li><strong>passes</strong> 4.1.2 Name, Role, Value</li>
+    </ul>
+    <p>and <em>arguably</em> fails no other criterion, unless you want to drag out 2.4.6 <strong>Headings and Labels</strong> because the label is not "descriptive"?<br> or 1.3.1 <strong>Info and Relationships</strong>?</p>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        "I think what the<br><strong>founding fathers/mothers</strong><br>of WCAG meant to say..."
     </div>
 </div></section>
 
@@ -521,8 +568,10 @@
 <section class="slide listing"><div>
     <div>
         <h2>F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision</h2>
+        <img src="images/red-text-pink-link.png" alt="Dark red text with a pink link without an underline">
         <blockquote><p>Note 1: Red and Pink are the same color (hue) but they have different lightness (which is not color). So red and pink would pass the requirement for "not distinguished by color (hue) alone" since they differ by lightness (which is not color) - as long as the difference in lightness (contrast) is 3:1 or greater</p></blockquote>
-        <p>WAT?</p>
+        <p>a note buried in a non-normative technique redefining what "color" means?</p>
+        <p>...at least now added to <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html" target="_blank">WCAG 2.2 understanding for 1.4.1</a> (see <a href="https://github.com/w3c/wcag/pull/1500" target="_blank">#1500</a>)</p>
     </div>
 </div></section>
 
@@ -538,8 +587,9 @@
 
 <section class="slide statement"><div>
     <div>
-        <p>...but we'll fix it in <strong>WCAG 2.2</strong> (?)</p>
-        <p class="context">2.4.11 <strong>Focus Visible Enhanced</strong> (Level AA)</p>
+        <p>...but we'll fix focus WCAG 2.2</p>
+        <p class="context">2.4.11 <strong> Focus Appearance (Minimum)</strong> (Level AA)</p>
+        <p class="context">2.4.12 <strong> Focus Appearance (Enhanced)</strong> (Level AAA)</p>
     </div>
 </div></section>
 
@@ -712,8 +762,16 @@
 <section class="slide"><div>
     <div>
         <img src="images/github-w3c-wcag.png" alt="Screenshot of W3C WCAG GitHub repository issues">
-        <p>join the debate/discussion (more open nowadays)</p>
-        <p><a href="https://github.com/w3c/wcag/issues">github.com/w3c/wcag/issues</a></p>
+        <p>join the open debate/discussion <a href="https://github.com/w3c/wcag/issues">github.com/w3c/wcag/issues</a><br>also a good place to look if there's <strong>pending clarifications</strong></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        <img class="cover" src="images/github-w3c-wcag-counters.png" alt="Closeup of the W3C WCAG GitHub repository, showing it has 533 open issues, 145 pull requests, and 193 branches">
+        <p>frustration: most efforts going towards <strong>new WCAG 2.2 <abbr title="Success Criteria">SCs</abbr></strong><br>rather than fixing what's broken in 2.0/2.1</p>
     </div>
 </div></section>
 
@@ -740,9 +798,8 @@
 
 <section class="slide"><div>
     <div>
-        <img src="images/w3c-silver-tf.png" alt="Screenshot of W3C Silver Task Force of the AGWG page">
-        <p>the next generation of accessibility guidelines...</p>
-        <p><a href="https://w3.org/WAI/GL/task-forces/silver">w3.org/WAI/GL/task-forces/silver</a></p>
+        <img src="images/github-canaxess-wcag.png" alt="Screenshot of the Canaxess wcag-tests GitHub repository">
+        <p><a href="https://github.com/canaxess/wcag-tests">github.com/canaxess/wcag-tests</a></p>
     </div>
 </div></section>
 
@@ -750,9 +807,9 @@
 
 <section class="slide"><div>
     <div>
-        <img src="images/w3c-silver-scoring.png" alt="Screenshot of W3C Silver Task Force wiki's conformance section">
-        <p>moving away from binary pass/fail conformance (or trying)</p>
-        <p><a href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/Main_Page#Silver_Conformance">www.w3.org/.../#Silver_Conformance</a></p>
+        <img src="images/canaxess-wcag.png" alt="Screenshot of part of the Canaxess Web Content Accessibility Guidelines (WCAG) Checklist">
+        <p>less dense/technical than ACT Rules, but early days</p>
+        <p>same risk of "boiling the ocean"?</p>
     </div>
 </div></section>
 
@@ -760,11 +817,18 @@
 
 <section class="slide"><div>
     <div>
-        <img src="images/w3c-silver-scoring-example.png" alt="Screenshot of one of the proposed scoring examples ... utterly confusing spreadsheet of points, weighting of issues, etc.">
+        <img src="images/wcag3.png" alt="Screenshot of the W3C Accessibility Guidelines (WCAG) 3.0 - W3C Working Draft 08 June 2021">
+        <p><a href="https://www.w3.org/TR/wcag-3.0/">w3.org/TR/wcag-3.0</a></p>
+        <p>but note that it's still <strong>very early days</strong> on this</p>
+        <p class="context">and it will be quite some time before legislation references 3.0 once it's actually a ratified recommendation...</p>
+    </div>
+</div></section>
+
 <!-- -->
 
+<section class="slide impact"><div>
     <div>
-        <p>...in the meantime though...</p>
+        <p>but in the <strong>meantime</strong> ...</p>
     </div>
 </div></section>
 
@@ -779,9 +843,10 @@
 
 <!-- -->
 
-<section class="slide"><div>
+<section class="slide statement"><div>
     <div>
-        <img class="cover" src="images/lebowski-rules.png" alt="Meme picture from The Big Lebowski - Walter pointing his gun, with superimposed text: This isn't Nam, there are rules">
+        <p>"but unless it's reported as a <strong>WCAG failure</strong> <br>the client won't change it"</p>
+        <p class="context">then you have more fundamental problem...</p>
     </div>
 </div></section>
 
@@ -790,7 +855,7 @@
 <section class="slide impact"><div>
     <div>
     <p>as auditor, you do your client a <strong>disservice</strong> by not making clear what is and isn't a <strong>normative failure</strong></p>
-    <p class="context">...what happens when a clued-up client rightly challenges your claim? all your other results lose credibility...</p>
+    <p class="context">...what happens when a clued-up client rightly challenges your claim? <strong>all your other results lose credibility!</strong></p>
     </div>
 </div></section>
 
@@ -835,7 +900,7 @@
 <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/302">2.4.7 Focus Visible - what counts as "visible"? #302</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/891">Must the tooltip of icons match the accessible name? (for "Label in Name", SC 2.5.3) #891</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/878">Keyboard operation with assistive technology: 2.1.1 or 4.1.2? #878</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/867#issuecomment-524531280">Can title on links (e.g. linked icon) as sole source of accName ever pass 1.1.1? #867 (side discussion about high contrast mode and reponsibility of user agents)</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/867#issuecomment-524531280">Can title on links (e.g. linked icon) as sole source of accName ever pass 1.1.1? #867 (side discussion about high contrast mode and responsibility of user agents)</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/866">Error of the User Agents part of WCAG or not #866</a></li>
 </ul>
 </div></section>
@@ -888,16 +953,30 @@
         <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/585">WCAG 2.1 Understanding 2.3.1 - missing/vague dimension definitions #585</a></li>
         <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/773">1.4.5 / 1.4.9 Image of Text and <text> inside SVGs #773</a></li>
         <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/856">Clarity on 1.4.11 as it applies to "Cards" #856</a></li>
+        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/2069">Can ENTER on seach field be accepted as conforming alternative to inaccessible control (loupe icon)? #2069</a></li>
+    </ul>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <ul>
+        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/680">Cursor as sole focus indicator of inputs sufficient to meet 1.4.11? #680</a></li>
+        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/1467">Looking for definitive clarification regarding 1.4.1 #1467</a></li>
+        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/2063">1.4.10: If original page must be scrolled and unchanged at 320px - is that a violation of "Reflow"? #2063</a></li>
+        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/1014">1.4.11 Understanding: Additional focus indication of text inputs (default caret visible) #1014</a></li>
+        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/pull/1040">Errata/clarification of 2.2.1 Timing Adjustable extension #1040</a></li>
+        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/1775">Does the adjacent color clause of SC 1.4.11 apply when focus changes swap colors but also are adjacent to the background ? #1775</a></li>
     </ul>
 </div></section>
 
 <!-- -->
 
 <section class="slide"><div>
-    <img src="./images/tpg-blue.svg" alt="The Paciello Group" width="250">
+    <img src="./images/tetralogical-colour.svg" alt="TetraLogical" width="250">
     <p><a target="_blank" rel="noopener" href="https://twitter.com/patrick_h_lauke">@patrick_h_lauke</a><br>
     <a target="_blank" rel="noopener" href="https://github.com/patrickhlauke/">github.com/patrickhlauke/</a><br>
-    <a target="_blank" rel="noopener" href="https://www.paciellogroup.com/">paciellogroup.com</a><br>
+    <a target="_blank" rel="noopener" href="https://www.tetralogical.com/">tetralogical.com</a><br>
     <a target="_blank" rel="noopener" href="https://www.splintered.co.uk/">splintered.co.uk</a><p>
     <p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="images/cc-by-nc-sa.svg" width="150" alt="Creative Commons: Attribution Non-Commercial Share-Alike"></a></p>
 </div></section>
