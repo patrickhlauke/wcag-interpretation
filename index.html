@@ -21,7 +21,7 @@
 
 <section class="slide title" id="title"><div>
     <div class="titlestrap">
-        <img src="./images/tetralogical-white.svg" alt="TetraLogical" width="150">
+        <img src="./images/tetralogical-white.svg" alt="TetraLogical" width="200">
         <h1>These <strong>aren't</strong> the <abbr title="Success Criteria">SC</abbr>s you're looking for...</h1>
         <p>(mis)adventures in WCAG 2.x interpretation and audits</p>
     </div>
@@ -73,6 +73,7 @@
 <section class="slide statement"><div>
     <div>
         <p>far too often, auditors clearly <strong>dislike</strong> something, and look for a <strong>justification to fail it</strong>...</p>
+        <p><small>and I get it ... sometimes it's just to show how smart we are</small></p>
     </div>
 </div></section>
 
@@ -249,22 +250,37 @@
 
 <section class="slide listing"><div>
     <div>
-        <h2>3.2.3 <strong>Consistent Navigation</strong> (AA)</h2>
-        <blockquote><p>Navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.</p></blockquote>
-        <p>this only normatively requires the <strong>relative order</strong> of navigation (in relation to other page components) to be consistent - nothing more.</p>
-        <p>doesn't mandate that navigation should be same, work the same, etc across pages</p>
+        <h2>1.3.3 <strong>Sensory Characteristics</strong> (A)</h2>
+        <blockquote><p>Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.</p></blockquote>
+        <p>this only relates specifically to <strong>instructions</strong> ... and <strong>not</strong> whether or not sensory characteristics are used for content - this is covered by other SCs, like <strong>1.4.1 Use of Color</strong> or even <strong>1.1.1 Non-Text Content</strong>.</p>
+        <p><small><a href="https://github.com/w3c/wcag/pull/767" target="_blank">Fixes for Understanding 1.3.3 Sensory Characteristics #767</a></small></p>
     </div>
 </div></section>
 
 <!-- -->
 
-<section class="slide listing"><div>
-    <div>
-        <h2>1.3.3 <strong>Sensory Characteristics</strong> (A)</h2>
-        <blockquote><p>Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.</p></blockquote>
-        <p>this only relates specifically to <strong>instructions</strong> ... and <strong>not</strong> whether or not sensory characteristics are used - this is covered by other SCs, like <strong>1.4.1 Use of Color</strong> or even <strong>1.1.1 Non-Text Content</strong>.</p>
-        <p><small><a href="https://github.com/w3c/wcag/pull/767" target="_blank">Fixes for Understanding 1.3.3 Sensory Characteristics #767</a></small></p>
-    </div>
+<section class="slide code listing"><div>
+    <h3>example: buttons with shapes or colours</h3>
+    <img src="images/1.3.3-pass.png" height="150" alt="Two sets of unlabelled buttons - in the first, one button is square, the other is round; in the second, both buttons are square, but one is red while the other is green">
+    <ul>
+        <li><strong>fail</strong> 1.1.1 Non-text Content (if there's no hidden text / accessible name)</li>
+        <li><strong>fail</strong> 1.4.1 Use of Color for the second set</li>
+        <li><strong>fail</strong> 4.1.2 Name, Role, Value (if there's no accessible name)</li>
+        <li><strong>pass</strong> <em>1.3.3 Sensory Characteristics</em> as there are no <strong>instructions</strong></li>
+    </ul>
+</div></section>
+
+<!-- -->
+
+<section class="slide code listing"><div>
+    <h3>example: buttons with shapes or colours</h3>
+    <img src="images/1.3.3-fail.png" height="150" alt="The same two sets of buttons, but this time there are instructions: 'To proceed, press the round button' and 'To proceed, press the green button'">
+    <ul>
+        <li><strong>fail</strong> 1.1.1 Non-text Content (if there's no hidden text / accessible name)</li>
+        <li><strong>fail</strong> 1.4.1 Use of Color for the second set</li>
+        <li><strong>fail</strong> 4.1.2 Name, Role, Value (if there's no accessible name)</li>
+        <li><strong>fail</strong> <em>1.3.3 Sensory Characteristics</em> as there <em>are</em> instructions</li>
+    </ul>
 </div></section>
 
 <!-- -->
@@ -633,7 +649,7 @@
 <section class="slide listing"><div>
     <div>
         <h2>1.4.12 <strong>Text Spacing</strong> (AA)</h2>
-        <blockquote><p>In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:</p>
+        <blockquote><p>In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following [...]:</p>
         <ul>
             <li>Line height (line spacing) to at least 1.5 times the font size</li>
             <li>Spacing following paragraphs to at least 2 times the font size</li>
@@ -642,7 +658,7 @@
         </ul>
         <p>[...]</p>
         </blockquote>
-        <p>only those <strong>exact values and over</strong> - if content breaks/stops working at line height of 1.4 instead of 1.5, not a failure...</p>
+        <p>only those <strong>exact values and over</strong> – if content breaks/stops working at line height of 1.4 instead of 1.5, not a failure.</p><p>also, do you test the <strong>"at least"</strong> part here, and up to which values?</p>
     </div>
 </div></section>
 
@@ -653,6 +669,29 @@
         <img src="images/textspacing.png" alt="Screenshots from a text spacing example where text content is cut off in a container *except* when line height is *exactly* at 1.5">
         <p>use JavaScript to detect line height and fix <strong>only if 1.5 or higher</strong></p>
         <p><a href="https://codepen.io/patrickhlauke/pen/jgVGOp">codepen.io/patrickhlauke/pen/jgVGOp</a></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>1.4.12 <strong>Text Spacing</strong> (AA)</h2>
+        <blockquote><p>In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting <strong>all of the following</strong> [...]:</p>
+        <p>[...]</p>
+        </blockquote>
+        <p>what if user changes just a few (e.g. just letter spacing) and content breaks, but does somehow work again once they set <em>all</em> properties (line height, spacing following paragraphs, letter spacing, word spacing)?</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <blockquote>this bookmarklet didn't work to change text styles ... can I fail this?</blockquote>
+        <p><strong>no you can't</strong> ... the SC doesn't care if a user can or can't change the metrics, or if a particular bookmarklet or method doesn't work.</p>
+        <p>only that <em>if</em> the metrics are indeed changed, <em>then</em> content doesn't become unreadable or unusable.</p>
+        <p><small><a href="https://github.com/w3c/wcag/pull/1687" target="_blank">Understanding 1.4.12: clarify the intent and author responsibility #1687</a></small></p>
     </div>
 </div></section>
 
@@ -669,7 +708,7 @@
 
 <section class="slide"><div>
     <div>
-        <img class="cover" src="images/sudden-clarity-clarence.png" alt="Meme picture 'sudden clarity Clarence': young man at a party staring into the distance as if he is experiencing an epiphany">
+        <img class="cover" src="images/sudden-clarity-clarence.png" alt="Meme picture 'sudden clarity Clarence': young man at a packed party/rave, staring into the distance as if he is having an epiphany">
     </div>
 </div></section>
 
@@ -737,7 +776,7 @@
 
 <section class="slide"><div>
     <div>
-        <img class="cover pixelated" src="images/bobbyapproved.png" alt="Classic Bobby v 3.2 Approved badge, with the comic-style british bobby/policeman with a wheelchair user symbol on his helmet">
+        <img class="cover pixelated" src="images/bobbyapproved.png" alt="Classic 'Bobby v3.2 Approved' badge, with the comic-style british bobby/policeman with a wheelchair user symbol on his helmet">
     </div>
 </div></section>
 
@@ -770,7 +809,7 @@
 
 <section class="slide"><div>
     <div>
-        <img class="cover" src="images/github-w3c-wcag-counters.png" alt="Closeup of the W3C WCAG GitHub repository, showing it has 533 open issues, 145 pull requests, and 193 branches">
+        <img class="cover" src="images/github-w3c-wcag-counters.png" alt="Close-up of the W3C WCAG GitHub repository, showing it has 533 open issues, 145 pull requests, and 193 branches">
         <p>frustration: most efforts going towards <strong>new WCAG 2.2 <abbr title="Success Criteria">SCs</abbr></strong><br>rather than fixing what's broken in 2.0/2.1</p>
     </div>
 </div></section>
@@ -791,6 +830,7 @@
     <div>
         <img src="images/github-act-r.png" alt="Composite screenshot of W3C ACT Rules Community pages on GitHub, showing a selection of rules, and the start of a specific rule (in this case, 'Heading is descriptive')">
         <p><a href="https://act-rules.github.io/rules/">act-rules.github.io/rules</a></p>
+        <p><strong>mechanistic</strong> attempt to define all possible types of web content?</p>
     </div>
 </div></section>
 
@@ -809,7 +849,7 @@
     <div>
         <img src="images/canaxess-wcag.png" alt="Screenshot of part of the Canaxess Web Content Accessibility Guidelines (WCAG) Checklist">
         <p>less dense/technical than ACT Rules, but early days</p>
-        <p>same risk of "boiling the ocean"?</p>
+        <p>same risk of <strong>boiling the ocean</strong>?</p>
     </div>
 </div></section>
 
@@ -845,7 +885,7 @@
 
 <section class="slide statement"><div>
     <div>
-        <p>"but unless it's reported as a <strong>WCAG failure</strong> <br>the client won't change it"</p>
+        <p>“but unless it's reported as a <strong>WCAG failure</strong> <br>the client won't change it”</p>
         <p class="context">then you have more fundamental problem...</p>
     </div>
 </div></section>
@@ -953,7 +993,7 @@
         <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/585">WCAG 2.1 Understanding 2.3.1 - missing/vague dimension definitions #585</a></li>
         <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/773">1.4.5 / 1.4.9 Image of Text and <text> inside SVGs #773</a></li>
         <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/856">Clarity on 1.4.11 as it applies to "Cards" #856</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/2069">Can ENTER on seach field be accepted as conforming alternative to inaccessible control (loupe icon)? #2069</a></li>
+        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/2069">Can ENTER on search field be accepted as conforming alternative to inaccessible control (loupe icon)? #2069</a></li>
     </ul>
 </div></section>
 
