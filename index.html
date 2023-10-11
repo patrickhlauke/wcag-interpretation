@@ -62,9 +62,9 @@
 
 <!-- -->
 
-<section class="slide"><div>
+<section class="slide cover"><div>
     <div>
-        <img class="cover pixelated" src="images/fail-all-the-things.png" alt="Meme picture: FAIL ALL THE THINGS">
+        <img class="cover" src="images/fail-all-the-things.png" alt="Meme picture: FAIL ALL THE THINGS">
     </div>
 </div></section>
 
@@ -88,7 +88,7 @@
 
 <!-- -->
 
-<section class="slide"><div>
+<section class="slide cover"><div>
     <div>
         <img class="cover" src="images/dredd-law.gif" alt="Animation loop from Judge Dredd (1995) - Dredd shouting 'I am the law'">
     </div>
@@ -119,8 +119,17 @@
 
 <section class="slide statement"><div>
     <div>
-        <p>only a few <strong>cherry-picked examples</strong>...</p>
-        <p class="context">otherwise we'd be here a few more hours</p>
+        <p>with <span class="new">WCAG 2.2</span> we now have 9 more SCs!</p>
+        <p class="context">...just more potential for confusion and misinterpretation?</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        <p>only a few <strong>cherry-picked examples</strong></p>
+        <p class="context">but there's more where that came from...</p>
     </div>
 </div></section>
 
@@ -135,7 +144,7 @@
 
 <!-- -->
 
-<section class="slide"><div>
+<section class="slide cover"><div>
     <div>
         <img class="cover" src="images/droids.gif" alt="Animation loop from Star Wars - Obi Wan waving his hand and saying: these aren't the droids you're looking for...">
     </div>
@@ -300,7 +309,26 @@
         <img src="images/use-of-color-links.png" alt="Two lines of black text, both containing a link each; the links aren't underlines; in the first line, the link is blue, while in the second line the link is black just like the text (and not discernible at all visually)">
         <p>both lines contain a link. but only in the first line is <strong>colour</strong> used.</p>
         <p>the first cases <strong>fails</strong> 1.4.1 Use of Color, but the second <strong>passes</strong></strong></p>
-        <p>yes, it's rubbish, but no, can't argue that "color is used to convey..."</p>
+        <p>auditors pondering failing the previous example for <strong>not</strong> using colour...</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>1.3.1 <strong>Info and Relationships</strong> (A)</h2>
+        <blockquote><p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p></blockquote>
+        <p>auditors pondering failing the previous example for <strong>not</strong> conveying things through presentation...</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        <p>SCs are <strong>non-commutative</strong><br>
+        <small>("if X, then Y" does not mean "if Y, then X")</small></p>
     </div>
 </div></section>
 
@@ -324,6 +352,41 @@
         <li><em>arguably</em>, link also <strong>fails</strong> 2.4.4 Link Purpose (In Context)</li>
     </ul>
     <p>need consistency in how this is reported</p>
+</div></section>
+
+<!-- -->
+
+<section class="slide impact"><div>
+    <div>
+        <strong>interrelated</strong> criteria...
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>3.1.1 <strong>Language of Page</strong> (A)</h2>
+        <blockquote><p>The default human language of each Web page can be programmatically determined.</p></blockquote>
+        <h2>3.1.2 <strong>Language of Parts</strong> (AA)</h2>
+        <blockquote><p>The human language of each passage or phrase in the content can be programmatically determined [...]</p></blockquote>
+        <p>if you can't determine the language of the page, then you also can't determine the language of each passage or phrase.</p>
+        <p><strong>fail one, and you automatically fail the other...</strong></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide code listing"><div>
+    <h2>minimum and enhanced</h2>
+    <ul>
+        <li><strong>1.4.3</strong> Contrast (Minimum) → <strong>1.4.6</strong> Contrast (Enhanced)</li>
+        <li><strong>2.4.11</strong> Focus Not Obscured (Minimum) → <strong>2.4.12</strong> Focus Not Obscured (Enhanced)</li>
+        <li><strong>2.5.8</strong> Target Size (Minimum) → <strong>2.5.5</strong> Target Size (Enhanced)</li>
+        <li><strong>3.3.8</strong> Accessible Authentication (Minimum) → <strong>3.3.9</strong> Accessible Authentication (Enhanced)</li>
+    </ul>
+    <p><strong>fail one, and you automatically fail the other...</strong></p>
+    <p>need consistency in how this is reported (if you care about AAA)</p>
 </div></section>
 
 <!-- -->
@@ -367,6 +430,7 @@
     <h2>subjective interpretation?</h2>
     <ul>
         <li><strong>1.1.1</strong> <q>All non-text content [...] has a text alternative that serves the equivalent purpose</q> - but what's the purpose?</li>
+        <li><strong>1.2.2</strong> <q>Captions are provided ...</q> - but do these captions need to be exact, identify speakers, etc.?</li>
         <li><strong>1.3.1</strong> <q>Information, structure, and relationships conveyed through presentation [...]</q> - where do you draw the line?</li>
         <li><strong>2.4.6</strong> <q>Headings and labels describe topic or purpose</q> - what's "descriptive" exactly?</li>
     </ul>
@@ -375,26 +439,20 @@
 <!-- -->
 
 <section class="slide code listing"><div>
-    <pre><code class="html">&lt;div class="footer"&gt; ... &lt;/div&gt;</code></pre>
-    <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they don't use <code>&lt;footer&gt;</code> or <code>role="contentinfo"</code>?</p>
-    <p>the footer may be styled differently from the rest of the page, but is its purpose not clear from context?</p>
-</div></section>
-
-<!-- -->
-
-<section class="slide code listing"><div>
+    <h2>what is a list?</h2>
     <img src="images/links.png" alt="Three links, presented on a single line, separated by slashes">
     <pre><code class="html">&lt;a href="/"&gt;home&lt;/a&gt;
 &lt;a href="..."&gt;products&lt;/a&gt;
 &lt;a href="..."&gt;contact&lt;/a&gt;</code></pre>
     <p>do you <strong>fail</strong> 1.3.1 Info and Relationships because they didn't wrap this in a <code>&lt;ul&gt;</code>, even if this isn't <q>conveyed through presentation</q>?</p>
+    <p>if you look hard enough, it's <del>turtles</del> <ins>lists</ins> all the way down</p>
 </div></section>
 
 <!-- -->
 
 <section class="slide impact"><div>
     <div>
-        WCAG has a few strange <strong>omissions</strong>...
+        WCAG has a few strange <strong>omissions</strong>, <strong>ambiguities</strong>, <strong>exemptions</strong>...
     </div>
 </div></section>
 
@@ -404,8 +462,7 @@
     <div>
         <h2>2.4.4 <strong>Link Purpose (In Context)</strong> (AA)</h2>
         <blockquote><p>The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context [...]</p></blockquote>
-        <p>but what about <strong>buttons</strong> or similar?</p>
-        <p>is perhaps covered by <strong>4.1.2 Name, Role, Value</strong>?</p>
+        <p>what counts as "programmatically determined link context"? do preceding headings count?</p>
     </div>
 </div></section>
 
@@ -413,27 +470,18 @@
 
 <section class="slide listing"><div>
     <div>
-        <h2>4.1.2 <strong>Name, Role, Value</strong> (A)</h2>
-        <blockquote><p>For all user interface components [...] the name and role can be programmatically determined [...]</p></blockquote>
-        <p>buttons need to have a programmatically exposed accessible name, but <strong>doesn't</strong> mandate that the name needs to make sense / convey purpose</p>
+        <h2>3.3.8 <strong>Accessible Authentication (Minimum)</strong> (AA)</h2>
+        <div class="new">New in WCAG 2.2</div>
+        <blockquote><p>A cognitive function test (such as remembering a password or solving a puzzle) is not required for any step <strong>in an authentication process</strong> [...]</p></blockquote>
+        <p>explicitly exempts "object recognition" at AA</p>
     </div>
 </div></section>
 
 <!-- -->
 
-<section class="slide code listing"><div>
-    <pre><code class="html">&lt;p&gt;...my amazing article...&lt;/p&gt;
-&lt;p&gt;&lt;a href="..."&gt;Read more&lt;/a&gt;&lt;/p&gt;</code></pre>
-    <ul>
-        <li><strong>fails</strong> 2.4.4 Link Purpose (In Context)</li>
-    </ul>
-    <hr>
-    <pre><code class="html">&lt;p&gt;...my amazing product...&lt;/p&gt;
-&lt;p&gt;&lt;button&gt;Add to cart&lt;/button&gt;&lt;/p&gt;</code></pre>
-    <ul>
-        <li><strong>passes</strong> 4.1.2 Name, Role, Value</li>
-    </ul>
-    <p>and <em>arguably</em> fails no other criterion, unless you want to drag out 2.4.6 <strong>Headings and Labels</strong> because the label is not "descriptive"?<br> or 1.3.1 <strong>Info and Relationships</strong>?</p>
+<section class="slide"><div>
+    [@TODO: sign-up versus sign-in]
+    <p>what counts as an "authentication process"?</p>
 </div></section>
 
 <!-- -->
@@ -446,7 +494,7 @@
 
 <!-- -->
 
-<section class="slide"><div>
+<section class="slide cover"><div>
     <div>
         <img class="cover" src="images/lebowski.gif" alt="Animation loop from The Big Lebowski: the dude sitting at the bowling hall, shaking his head">
     </div>
@@ -531,13 +579,77 @@
 
 <!-- -->
 
+<section class="slide statement"><div>
+    <div>
+        <p>...but we'll fix focus WCAG 2.2?</p>
+        <p class="context">2.4.11 <strong> Focus Appearance (Minimum)</strong> (Level AA)</p>
+        <p class="context">2.4.12 <strong> Focus Appearance (Enhanced)</strong> (Level AAA)</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide statement"><div>
+    <div>
+        <p>...but we'll fix focus WCAG 2.2!</p>
+        <p class="context"><del>2.4.11 Focus Appearance (Minimum) (Level AA)</del></p>
+        <p class="context"><del>2.4.12 Focus Appearance (Enhanced) (Level AAA)</del></p>
+        <p class="context">2.4.13 <strong> Focus Appearance </strong> (Level AAA)</p>
+        <p><small>Only at Level AAA … <strong>where success criteria go to die</strong> …</small></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>2.4.11 <strong>Focus Not Obscured (Minimum)</strong> (AA)</h2>
+        <div class="new">New in WCAG 2.2</div>
+        <blockquote><p>When a user interface component receives keyboard focus, the component is <strong>not entirely hidden</strong> due to author-created content.</p></blockquote>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <img class="bordered" src="images/focus-obscured.png" alt="Screenshot of a site with a sticky header - a link in the underlying main content has focus, and is half obscured by the header">
+        <p>classic example: sticky header ...</p>
+        <p>this <strong>passes</strong> 2.4.11 Focus Not Obscured (Minimum) (AA)</p>
+        <p>but how far can we take the "not <strong>entirely</strong> hidden" aspect?</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <img class="bordered" src="images/focus-obscured-extreme2.png" alt="Screenshot of a site with a sticky header - a link in the underlying main content has focus, and is completely covered except for the bottom 1px border of the focus indicator just peeking out from underneath the header">
+        <p>arguably ... not <strong>entirely</strong> hidden</p>
+        <p><small>(some disagree whether or not <a href="https://mastodon.world/@siblingpastry/110779943577047394" target=_blank>focus indicator is part of the user interface component</a>)</a></small></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+
+<section class="slide impact">
+    <div>
+        [@TODO: does this need its own new grouping/title?]
+    </div>
+</section>
+
+<!-- -->
+
 <section class="slide listing"><div>
     <div>
         <h2>1.4.11 <strong>Non-text Contrast</strong> (AA)</h2>
         <blockquote><p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):</p>
-        <p>[...]</p>
+        <ul>
+            <li>User Interface Components: Visual information <strong>required to identify user interface components</strong> and <strong>states</strong> [...]</li>
+            <li>Graphical Objects: [...]</li>
+        </ul>
         </blockquote>
-        <p>note that this only applies normatively to <strong>adjacent</strong> colors ... <strong>doesn't</strong> apply to contrast between different colors used for states of the same control</p>
     </div>
 </div></section>
 
@@ -545,27 +657,7 @@
 
 <section class="slide"><div>
     <div>
-        <img src="images/focus3.png" alt="Three controls labeled 'one', 'two' and 'three'; the middle one, focused, has a slightly light green background, while the others have a light gray background; the green and gray colors are immediately adjacent, with no gap between them">
-        <p><strong>fails</strong> 1.4.11 Non-text Contrast</p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide"><div>
-    <div>
-        <img src="images/focus4.png" alt="Three controls labeled 'one', 'two' and 'three'; the middle one, focused, has a slightly light green background, while the others have a light gray background; the controls are separated by grey borders, meaning the very similar light green and light gray are not adjacent">
-        <p><strong>passes</strong> 1.4.11 Non-text Contrast</p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide"><div>
-    <div>
-        <img src="images/focus2.png" alt="Two identical looking 'Sign in' buttons - the one on the left is light green, the one on the right light gray">
-        <p><strong>passes</strong> 1.4.11 Non-text Contrast.</p>
-        <p>but wait, does it fail 1.4.1 <strong>Use of Color</strong>?</p>
+        [@TODO: example slide with button - one with a faint border, one without border at all ... they don't necessarily fail 1.4.11]
     </div>
 </div></section>
 
@@ -574,20 +666,13 @@
 <section class="slide listing"><div>
     <div>
         <h2>1.4.1 <strong>Use of Color</strong> (A)</h2>
-        <blockquote><p>Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</p></blockquote>
-        <p>but there's an escape clause in the <strong>non-normative</strong> F73 failure technique that tries to redefine, by the backdoor, what "color" means...</p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <div>
-        <h2>F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision</h2>
-        <img src="images/red-text-pink-link.png" alt="Dark red text with a pink link without an underline">
-        <blockquote><p>Note 1: Red and Pink are the same color (hue) but they have different lightness (which is not color). So red and pink would pass the requirement for "not distinguished by color (hue) alone" since they differ by lightness (which is not color) - as long as the difference in lightness (contrast) is 3:1 or greater</p></blockquote>
-        <p>a note buried in a non-normative technique redefining what "color" means?</p>
-        <p>...at least now added to <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html" target="_blank">WCAG 2.2 understanding for 1.4.1</a> (see <a href="https://github.com/w3c/wcag/pull/1500" target="_blank">#1500</a>)</p>
+        <blockquote>
+            <p>Color is not used as the only visual means of <strong>conveying information</strong>, indicating an action, prompting a response, or distinguishing a visual element.</p>
+        </blockquote>
+        <p>beware: if you look hard enough, <strong>everything</strong> is a "use of color".</p>
+        <p>see the note (used to be buried in a technique F73, now at least moved to understanding):</p>
+        <blockquote><p>If content is conveyed through the use of colors that differ not only in their hue, but that also have a significant difference in lightness, then this counts as an additional visual distinction, as long as the difference in relative luminance between the colors leads to a contrast ratio of 3:1 or greater.</p></blockquote>
+        <p><small><a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html" target="_blank">WCAG 2.2 understanding for 1.4.1</a> (see my pull request <a href="https://github.com/w3c/wcag/pull/1500" target="_blank">#1500</a>)</small></p>
     </div>
 </div></section>
 
@@ -595,17 +680,23 @@
 
 <section class="slide"><div>
     <div>
-        <img class="cover" src="images/matrix-morpheus-kungfu.gif" alt="Animation loop from the Matrix: Morpheus in the kung-fu dojo simulation, doing the 'come at me' hand gesture">
+        [@TODO: example slide with button - when focused with keyboard (show 'TAB' overlay) it changes colour. 1.4.1 can be used.]
     </div>
 </div></section>
 
 <!-- -->
 
-<section class="slide statement"><div>
+<section class="slide"><div>
     <div>
-        <p>...but we'll fix focus WCAG 2.2</p>
-        <p class="context">2.4.11 <strong> Focus Appearance (Minimum)</strong> (Level AA)</p>
-        <p class="context">2.4.12 <strong> Focus Appearance (Enhanced)</strong> (Level AAA)</p>
+        [@TODO: example slide with button - when hovered with mouse (show mouse pointer) it changes colour. 1.4.1? what if mouse pointer changes too?.]
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide cover"><div>
+    <div>
+        <img class="cover" src="images/matrix-morpheus-kungfu.gif" alt="Animation loop from the Matrix: Morpheus in the kung-fu dojo simulation, doing the 'come at me' hand gesture">
     </div>
 </div></section>
 
@@ -630,45 +721,8 @@
         </ul>
         <p>[...]</p>
         </blockquote>
-        <p>meant to help low vision users that require up to 400% zoom, but ended up too specific - only normatively applies at those <strong>exact values</strong></p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide"><div>
-    <div>
-        <img src="images/reflow.png" alt="Screenshots from a reflow example where there are both horizontal and vertical scrollbars at any window size *except* when *exactly* at 320 CSS pixel width">
-        <p><code>@media (<strong>width: 320px</strong>) { ... }</code></p>
-        <p><a href="https://codepen.io/patrickhlauke/pen/ZZqzaB">codepen.io/patrickhlauke/pen/ZZqzaB</a></p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <div>
-        <h2>1.4.12 <strong>Text Spacing</strong> (AA)</h2>
-        <blockquote><p>In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following [...]:</p>
-        <ul>
-            <li>Line height (line spacing) to at least 1.5 times the font size</li>
-            <li>Spacing following paragraphs to at least 2 times the font size</li>
-            <li>Letter spacing (tracking) to at least 0.12 times the font size</li>
-            <li>Word spacing to at least 0.16 times the font size</li>
-        </ul>
-        <p>[...]</p>
-        </blockquote>
-        <p>only those <strong>exact values and over</strong> – if content breaks/stops working at line height of 1.4 instead of 1.5, not a failure.</p><p>also, do you test the <strong>"at least"</strong> part here, and up to which values?</p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide"><div>
-    <div>
-        <img src="images/textspacing.png" alt="Screenshots from a text spacing example where text content is cut off in a container *except* when line height is *exactly* at 1.5">
-        <p>use JavaScript to detect line height and fix <strong>only if 1.5 or higher</strong></p>
-        <p><a href="https://codepen.io/patrickhlauke/pen/jgVGOp">codepen.io/patrickhlauke/pen/jgVGOp</a></p>
+        <p>to help low vision users. should ideally have been "use responsive design"</p>
+        <p>instead, it was watered down to 400% zoom on a 1280×1024 display … and now <strong>only</strong> normatively applies at those <strong>exact values</strong></p>
     </div>
 </div></section>
 
@@ -678,9 +732,17 @@
     <div>
         <h2>1.4.12 <strong>Text Spacing</strong> (AA)</h2>
         <blockquote><p>In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting <strong>all of the following</strong> [...]:</p>
+        <ul>
+            <li>Line height (line spacing) to at least 1.5 times the font size</li>
+            <li>Spacing following paragraphs to at least 2 times the font size</li>
+            <li>Letter spacing (tracking) to at least 0.12 times the font size</li>
+            <li>Word spacing to at least 0.16 times the font size</li>
+        </ul>
         <p>[...]</p>
         </blockquote>
-        <p>what if user changes just a few (e.g. just letter spacing) and content breaks, but does somehow work again once they set <em>all</em> properties (line height, spacing following paragraphs, letter spacing, word spacing)?</p>
+        <p>only those <strong>exact values and over</strong></p>
+        <p>do you test the <strong>"at least"</strong> part here, and up to which values?</p>
+        <p>what if user changes just a few (e.g. just letter spacing)</p>
     </div>
 </div></section>
 
@@ -697,6 +759,73 @@
 
 <!-- -->
 
+<section class="slide impact"><div>
+    <div>
+        <p>SCs that are <strong>confusingly titled</strong></p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>2.5.8 <strong>Target Size (Minimum)</strong> (AA)</h2>
+        <div class="new">New in WCAG 2.2</div>
+        <blockquote><p>The size of the target for pointer inputs is at least 24 by 24 CSS pixels […]</p>
+        </blockquote>
+        <p>at first glance, the SC defines a minimum target size (it says so in the title)</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>2.5.8 <strong>Target Size (Minimum)</strong> (AA)</h2>
+        <div class="new">New in WCAG 2.2</div>
+        <blockquote><p>The size of the target for pointer inputs is at least 24 by 24 CSS pixels except where:</p>
+        <ul>
+            <li>Spacing: Undersized targets (those less than 24 by 24 CSS pixels) are positioned so that if a 24 CSS pixel diameter circle is centered on the bounding box of each, the circles do not intersect another target or the circle for another undersized target</li>
+        </ul>
+        …
+        </blockquote>
+        <p>the first exception turns this into a "minimum target spacing" SC</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide listing"><div>
+    <div>
+        <h2>3.2.6 <strong>Consistent Help</strong> (A)</h2>
+        <div class="new">New in WCAG 2.2</div>
+        <blockquote><p>If a Web page contains any of the following help mechanisms, and those mechanisms are repeated on multiple Web pages within a set of Web pages, they occur in <strong>the same order relative to other page content</strong>, unless a change is initiated by the user [...]:</p>
+        </blockquote>
+        <p>relative order here means just means a consistent "focus/reading order"</p>
+    </div>
+</div></section>
+
+<!-- -->
+
+<section class="slide"><div>
+    <div>
+        [@TODO: mock page with help mechanism in different visual locations]
+        <blockquote><p>"If the help item is visually in a different location, but in the same serial order, that is not helpful from a user's point of view, but it would not fail this criterion."</p></blockquote>
+        <p>also, while the understanding document spends an inordinate amount of space listing and explaining help mechanisms, the SC doesn't actually require any help mechanisms to be present at all...</p>
+    </div>
+</div></section>
+
+
+<!-- -->
+
+<section class="slide cover"><div>
+    <div>
+        <img class="cover" src="images/gladiator-are-you-not-entertained.gif" alt="Animated gif: Russel Crow in Gladiator, after winning his first fight, arms wide holding a sword and addressing the crowd: 'are you not entertained?'">
+    </div>
+</div></section>
+
+<!-- -->
+
 <section class="slide statement"><div>
     <div>
         <p>even after years of auditing,<br>I sometimes have weird <strong>moments of realisation</strong></p>
@@ -706,7 +835,7 @@
 
 <!-- -->
 
-<section class="slide"><div>
+<section class="slide cover"><div>
     <div>
         <img class="cover" src="images/sudden-clarity-clarence.png" alt="Meme picture 'sudden clarity Clarence': young man at a packed party/rave, staring into the distance as if he is having an epiphany">
     </div>
@@ -790,7 +919,7 @@
 
 <!-- -->
 
-<section class="slide"><div>
+<section class="slide cover"><div>
     <div>
         <img class="cover" src="images/statler-and-waldorf.gif" alt="Animation loop from the Muppet Show - Statler and Waldorf in their balcony seat">
     </div>
@@ -800,7 +929,7 @@
 
 <section class="slide"><div>
     <div>
-        <img src="images/github-w3c-wcag.png" alt="Screenshot of W3C WCAG GitHub repository issues">
+        <img src="images/github-w3c-wcag.png" alt="Screenshot of W3C WCAG GitHub repository issues/pull requests, filtered for all open items filed by me">
         <p>join the open debate/discussion <a href="https://github.com/w3c/wcag/issues">github.com/w3c/wcag/issues</a><br>also a good place to look if there's <strong>pending clarifications</strong></p>
     </div>
 </div></section>
@@ -809,8 +938,8 @@
 
 <section class="slide"><div>
     <div>
-        <img class="cover" src="images/github-w3c-wcag-counters.png" alt="Close-up of the W3C WCAG GitHub repository, showing it has 533 open issues, 145 pull requests, and 193 branches">
-        <p>frustration: most efforts going towards <strong>new WCAG 2.2 <abbr title="Success Criteria">SCs</abbr></strong><br>rather than fixing what's broken in 2.0/2.1</p>
+        <img class="cover" src="images/github-w3c-wcag-counters.png" alt="Close-up of the W3C WCAG GitHub repository, showing it has 613 open issues, 209 pull requests, and 288 branches">
+        <p>frustration: most efforts has been going towards <strong>new WCAG 2.2 <abbr title="Success Criteria">SCs</abbr></strong><br>rather than fixing what's broken in 2.0/2.1</p>
     </div>
 </div></section>
 
@@ -818,46 +947,7 @@
 
 <section class="slide"><div>
     <div>
-        <img src="images/w3-act-r.png" alt="Screenshot of W3C ACT Rules Community Rules">
-        <p>more consistent Accessibility Compliance Testing (ACT)</p>
-        <p><a href="https://w3.org/community/act-r/">w3.org/community/act-r</a></p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide"><div>
-    <div>
-        <img src="images/github-act-r.png" alt="Composite screenshot of W3C ACT Rules Community pages on GitHub, showing a selection of rules, and the start of a specific rule (in this case, 'Heading is descriptive')">
-        <p><a href="https://act-rules.github.io/rules/">act-rules.github.io/rules</a></p>
-        <p><strong>mechanistic</strong> attempt to define all possible types of web content?</p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide"><div>
-    <div>
-        <img src="images/github-canaxess-wcag.png" alt="Screenshot of the Canaxess wcag-tests GitHub repository">
-        <p><a href="https://github.com/canaxess/wcag-tests">github.com/canaxess/wcag-tests</a></p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide"><div>
-    <div>
-        <img src="images/canaxess-wcag.png" alt="Screenshot of part of the Canaxess Web Content Accessibility Guidelines (WCAG) Checklist">
-        <p>less dense/technical than ACT Rules, but early days</p>
-        <p>same risk of <strong>boiling the ocean</strong>?</p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide"><div>
-    <div>
-        <img src="images/wcag3.png" alt="Screenshot of the W3C Accessibility Guidelines (WCAG) 3.0 - W3C Working Draft 08 June 2021">
+        <img src="images/wcag3.png" alt="Screenshot of the W3C Accessibility Guidelines (WCAG) 3.0 - W3C Working Draft 24 July 2023">
         <p><a href="https://www.w3.org/TR/wcag-3.0/">w3.org/TR/wcag-3.0</a></p>
         <p>but note that it's still <strong>very early days</strong> on this</p>
         <p class="context">and it will be quite some time before legislation references 3.0 once it's actually a ratified recommendation...</p>
@@ -880,6 +970,14 @@
         <p class="context">whether you're a developer or an auditor doing an evaluation</p>
     </div>
 </div></section>
+
+<!-- -->
+
+<section class="slide cover">
+    <div>
+        <img class="cover" src="images/tron-users.jpg" alt="picture of Bruce Boxleitner in Tron (1982), holding his identity disc after a fight, with caption: I FIGHT FOR THE USERS">
+    </div>
+</section>
 
 <!-- -->
 
@@ -921,9 +1019,6 @@
 <section class="slide listing"><div>
 <h3>join my <strong>WCAG Trash Panda Webring</strong>:</h3>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/pull/612">Fixes to WCAG 2.1 Understanding 2.4.6 and 3.3.2 #612</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/pull/890">Edits to 135 failure #890</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/901">Proposal for color and contrast (1.3.1, 1.4.1, 1.4.3., 1.4.6, 1.4.11) #901</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/857">Should role button and input button be a WCAG fail if cannot be activated using space? #857</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/541">Does SC 1.4.11 require comparing focused and non-focused states #541</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/750">Ambiguity in understanding for 1.3.3 sensory characteristics #750</a></li>
@@ -951,10 +1046,7 @@
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/773">1.4.5 / 1.4.9 Image of Text and &lt;text&gt; inside SVGs #773</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/795">Revisiting imbalance between 1.2.4 Captions (Live) (AA) and 1.2.9 Audio-only (Live) (AAA) #795</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/717">ARIA in HTML conformance to conform WCAG ? #717</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/704">Failure technique F94 (1.4.4 resize text): remove "1280 pixels wide" step in test procedure #704</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/695">Contrast Ratio Math and Related Visual Issues #695</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/665">Include font weight for color contrast tests #665</a></li>
 <li><a target="_blank" rel="noopener" href="https://webaim.org/discussion/mail_thread?thread=9174&id=39687#39687"> Accessible P Tag Usage (WebAim)</a></li>
 </ul>
 </div></section>
