@@ -398,8 +398,9 @@ pre code.html { text-align:left; }
 	margin-bottom: 2em;
 }
 
-.new {
-	background: #DB009C;
+.new,
+.slide strong.new {
+	background: #DB009C !important;
 	display: inline-block;
 	padding: 0 0.25em;
 	color: #fff;
