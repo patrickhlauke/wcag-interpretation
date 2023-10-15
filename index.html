@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=792, user-scalable=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>These (still) aren't the SCs you're looking for … / Patrick H. Lauke</title>
     <link rel="stylesheet" href="shower/themes/redux-tetralite/styles/screen.css">
     <link rel="stylesheet" href="shower/themes/redux-tetralite/styles/overrides.css">
@@ -33,7 +31,7 @@
 <section class="slide listing"><div>
     <h2>about me …</h2>
     <ul>
-    <li>principal accessibility specialist at <a target="_blank" rel="noopener" href="https://www.tetralogical.com/">TetraLogical</a></li>
+    <li>principal accessibility specialist at <a target=_blank rel=noopener href="https://www.tetralogical.com/">TetraLogical</a></li>
     <li>previously at The Paciello Group (now TPGi)</li>
     <li>occasional W3C AGWG member</li>
     <li>WCAG <strong>trash panda</strong></li>
@@ -205,8 +203,7 @@
         <li><strong>fails</strong> 2.5.3 Label in Name</li>
         <li><strong>fails</strong> 4.1.2 Name, Role, Value</li>
     </ul>
-</div></section></ul>
-</ul>
+</div></section>
 
 <!-- -->
 
@@ -262,7 +259,7 @@
         <h2>1.3.3 <strong>Sensory Characteristics</strong> (A)</h2>
         <blockquote><p>Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.</p></blockquote>
         <p>this only relates specifically to <strong>instructions</strong> … and <strong>not</strong> whether or not sensory characteristics are used for content - this is covered by other SCs, like <strong>1.4.1 Use of Color</strong> or even <strong>1.1.1 Non-Text Content</strong>.</p>
-        <p><small><a href="https://github.com/w3c/wcag/pull/767" target="_blank">Fixes for Understanding 1.3.3 Sensory Characteristics #767</a></small></p>
+        <p><small><a target=_blank rel=noopener href="https://github.com/w3c/wcag/pull/767">Fixes for Understanding 1.3.3 Sensory Characteristics #767</a></small></p>
     </div>
 </div></section>
 
@@ -308,7 +305,7 @@
         <blockquote><p>Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</p></blockquote>
         <img src="images/use-of-color-links.png" alt="Two lines of black text, both containing a link each; the links aren't underlines; in the first line, the link is blue, while in the second line the link is black just like the text (and not discernible at all visually)">
         <p>both lines contain a link. but only in the first line is <strong>colour</strong> used.</p>
-        <p>the first cases <strong>fails</strong> 1.4.1 Use of Color, but the second <strong>passes</strong></strong></p>
+        <p>the first cases <strong>fails</strong> 1.4.1 Use of Color, but the second <strong>passes</strong></p>
         <p>auditors pondering failing the previous example for <strong>not</strong> using colour …</p>
     </div>
 </div></section>
@@ -607,7 +604,7 @@
     <div>
         <img class="bordered" src="images/focus-obscured-extreme2.png" alt="Screenshot of a site with a sticky header - a link in the underlying main content has focus, and is completely covered except for the bottom 1px border of the focus indicator just peeking out from underneath the header">
         <p>arguably … not <strong>entirely</strong> hidden</p>
-        <p><small>(some disagree whether or not <a href="https://mastodon.world/@siblingpastry/110779943577047394" target=_blank>focus indicator is part of the user interface component</a>)</a></small></p>
+        <p><small>(some disagree whether or not <a target=_blank rel=noopener href="https://mastodon.world/@siblingpastry/110779943577047394">focus indicator is part of the user interface component</a>)</small></p>
     </div>
 </div></section>
 
@@ -629,7 +626,7 @@
         <img src="images/use-of-color-button-focus.png" alt="Two sign in buttons. The left button is gray. The right button is light green. An arrow points from the left button to the right button, with text 'Tab' above it">
         <p>if your focus indication just changes colour, <strong>1.4.1</strong> likely applies</p>
         <blockquote><p>If content is conveyed through the use of colors that differ not only in their hue, but that also have a significant difference in lightness, then this counts as an additional visual distinction, as long as the difference in relative luminance between the colors leads to a contrast ratio of 3:1 or greater.</p></blockquote>
-        <p><small>used to be buried in technique F73, now in <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html" target="_blank">understanding for 1.4.1</a> (<a href="https://github.com/w3c/wcag/pull/1500" target="_blank">#1500</a>)</small></p>
+        <p><small>used to be buried in technique F73, now in <a target=_blank rel=noopener href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">understanding for 1.4.1</a> (<a target=_blank rel=noopener href="https://github.com/w3c/wcag/pull/1500">#1500</a>)</small></p>
     </div>
 </div></section>
 
@@ -704,7 +701,7 @@
         <blockquote>this bookmarklet didn't work to change text styles … can I fail this?</blockquote>
         <p><strong>no you can't</strong> … the SC doesn't care if a user can or can't change the metrics, or if a particular bookmarklet or method doesn't work.</p>
         <p>only that <em>if</em> the metrics are indeed changed, <em>then</em> content doesn't become unreadable or unusable.</p>
-        <p><small><a href="https://github.com/w3c/wcag/pull/1687" target="_blank">Understanding 1.4.12: clarify the intent and author responsibility #1687</a></small></p>
+        <p><small><a target=_blank rel=noopener href="https://github.com/w3c/wcag/pull/1687">Understanding 1.4.12: clarify the intent and author responsibility #1687</a></small></p>
     </div>
 </div></section>
 
@@ -906,8 +903,8 @@
 
 <section class="slide"><div>
     <div>
-        <img src="images/github-w3c-wcag.png" alt="Screenshot of W3C WCAG GitHub repository issues/pull requests, filtered for all open items filed by me">
-        <p>join the open debate/discussion <a href="https://github.com/w3c/wcag/issues">github.com/w3c/wcag/issues</a><br>also a good place to look if there's <strong>pending clarifications</strong></p>
+        <img src="images/github-w3c-wcag-lauke.png" alt="Screenshot of W3C WCAG GitHub repository issues/pull requests, filtered for all open items involving me">
+        <p>join my <strong>WCAG Trash Panda Web Ring</strong><br><a target=_blank rel=noopener href="https://github.com/w3c/wcag/issues?q=is%3Aopen%20patrickhlauke">github.com/w3c/wcag/issues?q=is%3Aopen%20patrickhlauke</a><br>to look for discussions and <strong>pending clarifications</strong></p>
     </div>
 </div></section>
 
@@ -925,7 +922,7 @@
 <section class="slide"><div>
     <div>
         <img src="images/wcag3.png" alt="Screenshot of the W3C Accessibility Guidelines (WCAG) 3.0 - W3C Working Draft 24 July 2023">
-        <p><a href="https://www.w3.org/TR/wcag-3.0/">w3.org/TR/wcag-3.0</a> … but still <strong>very early days</strong></p>
+        <p><a target=_blank rel=noopener href="https://www.w3.org/TR/wcag-3.0/">w3.org/TR/wcag-3.0</a> … but still <strong>very early days</strong></p>
         <p class="context">and it will be quite some time before legislation references 3.0 once it's actually a ratified recommendation …</p>
     </div>
 </div></section>
@@ -984,109 +981,12 @@
 
 <!-- -->
 
-<section class="slide impact"><div>
-<div>
-    <p><strong>further</strong> reading …</p>
-</div>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-<h3>join my <strong>WCAG Trash Panda Webring</strong>:</h3>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/857">Should role button and input button be a WCAG fail if cannot be activated using space? #857</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/541">Does SC 1.4.11 require comparing focused and non-focused states #541</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/750">Ambiguity in understanding for 1.3.3 sensory characteristics #750</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/755">Bad/incomplete example for Understanding 3.3.2 #755</a></li>
-</ul>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/635">"at least" should be "at most" in WCAG 2.1 SC 1.4.12 #635</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/698">Expand 1.4.10 to apply 'down to' instead of 'at' #698</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/302">2.4.7 Focus Visible - what counts as "visible"? #302</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/891">Must the tooltip of icons match the accessible name? (for "Label in Name", SC 2.5.3) #891</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/878">Keyboard operation with assistive technology: 2.1.1 or 4.1.2? #878</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/867#issuecomment-524531280">Can title on links (e.g. linked icon) as sole source of accName ever pass 1.1.1? #867 (side discussion about high contrast mode and responsibility of user agents)</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/866">Error of the User Agents part of WCAG or not #866</a></li>
-</ul>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/773">1.4.5 / 1.4.9 Image of Text and &lt;text&gt; inside SVGs #773</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/795">Revisiting imbalance between 1.2.4 Captions (Live) (AA) and 1.2.9 Audio-only (Live) (AAA) #795</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/704">Failure technique F94 (1.4.4 resize text): remove "1280 pixels wide" step in test procedure #704</a></li>
-<li><a target="_blank" rel="noopener" href="https://webaim.org/discussion/mail_thread?thread=9174&id=39687#39687"> Accessible P Tag Usage (WebAim)</a></li>
-</ul>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <ul>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/891">Must the tooltip of icons match the accessible name? (for "Label in Name", SC 2.5.3) #891</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/391">Are Reflow, Text Size and Orientation cumulative? #391</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/884">What does "support the following text style properties" mean (1.4.12)? #884</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/864">Does using the placeholder with a value alone pass 3.3.2 Labels or Instructions? #864</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/757">Using color ALONE as focus indicator #757</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/872">New SC for keyboard operation? #872</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/923">Does 3.3.2 mandate forms that have required/optional fields indicate this visually? #923</a></li>
-    </ul>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <ul>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/722">2.5.3: Must the visible label of site logos linking to the start page be included in the accName? #722</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/598">Exception for use of symbols as visible label in regard to 2.5.3 Label in Name #598</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/352">Understanding Label in Name #352</a></li>
-        <li><a target="_blank" rel="noopener" href="https://twitter.com/stevefaulkner/status/1080436758679035904">@stevefaulkner: "&lt;button aria-label="close"&gt;X&lt;/button&gt; pass or fail WCAG 2.1 label in name?"</a></li>
-    </ul>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <ul>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/696">Overlap between 3.3.1 and 4.1.2? #696</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/553">Problems with WCAG 2.0 Flash Definition #553</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/585">WCAG 2.1 Understanding 2.3.1 - missing/vague dimension definitions #585</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/773">1.4.5 / 1.4.9 Image of Text and <text> inside SVGs #773</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/856">Clarity on 1.4.11 as it applies to "Cards" #856</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/2069">Can ENTER on search field be accepted as conforming alternative to inaccessible control (loupe icon)? #2069</a></li>
-    </ul>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <ul>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/680">Cursor as sole focus indicator of inputs sufficient to meet 1.4.11? #680</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/1467">Looking for definitive clarification regarding 1.4.1 #1467</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/2063">1.4.10: If original page must be scrolled and unchanged at 320px - is that a violation of "Reflow"? #2063</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/1014">1.4.11 Understanding: Additional focus indication of text inputs (default caret visible) #1014</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/pull/1040">Errata/clarification of 2.2.1 Timing Adjustable extension #1040</a></li>
-        <li><a target="_blank" rel="noopener" href="https://github.com/w3c/wcag/issues/1775">Does the adjacent color clause of SC 1.4.11 apply when focus changes swap colors but also are adjacent to the background ? #1775</a></li>
-    </ul>
-</div></section>
-
-<!-- -->
-
 <section class="slide"><div>
     <img src="./images/tetralogical-colour.svg" alt="TetraLogical" width="250">
-    <p><a target="_blank" rel="noopener" href="https://twitter.com/patrick_h_lauke">@patrick_h_lauke</a><br>
-    <a target="_blank" rel="noopener" href="https://github.com/patrickhlauke/">github.com/patrickhlauke/</a><br>
-    <a target="_blank" rel="noopener" href="https://www.tetralogical.com/">tetralogical.com</a><br>
-    <a target="_blank" rel="noopener" href="https://www.splintered.co.uk/">splintered.co.uk</a><p>
-    <p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="images/cc-by-nc-sa.svg" width="150" alt="Creative Commons: Attribution Non-Commercial Share-Alike"></a></p>
+    <p><a target=_blank rel=noopener href="https://mastodon.social/@patrick_h_lauke">@patrick_h_lauke@mastodon.social</a><br>
+    <a target=_blank rel=noopener href="https://github.com/patrickhlauke/">github.com/patrickhlauke</a><br>
+    <a target=_blank rel=noopener href="https://www.tetralogical.com/">tetralogical.com</a></p>
+    <p><a target=_blank rel=noopener href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="images/cc-by-nc-sa.svg" width="150" alt="Creative Commons: Attribution Non-Commercial Share-Alike"></a></p>
 </div></section>
 
     <!--
