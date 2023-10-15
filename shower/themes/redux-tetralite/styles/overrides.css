@@ -301,28 +301,22 @@ pre code.html { text-align:left; }
 .slide strong {
 	background: #A900C0;
 	color: #fff;
-	padding: 0 0.25em;
+	padding: 0.06em 0.25em;
 }
 
 .slide.code strong {
 	background: #FF1958;
 }
 
-
-
 .slide.code {
 	background: #242424;
 	color: #fff;
 }
 
-
-
 .slide.impact small,
 .slide.statement small {
 	font-size: 0.55em;
 }
-
-
 
 .slide.impact {
 	background: #420065;
@@ -347,8 +341,6 @@ pre code.html { text-align:left; }
 	background: #fff;
 	color: #420065;
 }
-
-
 
 .slide.statement {
 	background: #6D6E71;
@@ -398,14 +390,17 @@ pre code.html { text-align:left; }
 	margin-bottom: 2em;
 }
 
-.new,
-.slide strong.new {
+div.new {
 	background: #DB009C !important;
 	display: inline-block;
 	padding: 0 0.25em;
 	color: #fff;
 	font-weight: bold;
 	font-size: 0.75em;
+}
+
+.slide strong.new {
+	background-color: #DB009C !important;
 }
 
 /* override for highlight.js */
