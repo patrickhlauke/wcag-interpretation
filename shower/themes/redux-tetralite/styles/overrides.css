@@ -11,6 +11,7 @@ hr {
 
 abbr {
     text-decoration: underline dotted;
+		text-underline-offset: 0.25em;
 }
 
 .slide p.context {
