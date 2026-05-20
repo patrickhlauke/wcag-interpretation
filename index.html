@@ -161,55 +161,6 @@
 
 <section class="slide listing"><div>
     <div>
-        <h2>3.3.2 <strong>Labels or Instructions</strong> (A)</h2>
-        <blockquote><p>Labels or instructions are provided when content requires user input.</p></blockquote>
-        <p>again, this <strong>doesn't</strong> mandate that labels be marked-up as <code>&lt;label&gt;</code> and properly associated with form controls - that's covered by <strong>1.3.1 Info and Relationships</strong> and (where it affects "accessible name" of controls) <strong>4.1.2 Name, Role, Value</strong>.</p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide code listing"><div>
-    <pre><code class="html">&lt;input type="text"&gt;</code></pre>
-    <ul>
-        <li><strong>passes</strong> 2.4.6 Headings and Labels</li>
-        <li><strong>fails</strong> 3.3.2 Labels or Instructions</li>
-        <li><strong>fails</strong> 4.1.2 Name, Role, Value</li>
-    </ul>
-</div></section>
-
-<!-- -->
-
-<section class="slide code listing"><div>
-    <pre><code class="html">&lt;p&gt;First name&lt;/p&gt;
-&lt;input type="text"&gt;</code></pre>
-    <ul>
-        <li><strong>passes</strong> 2.4.6 Headings and Labels</li>
-        <li><strong>passes</strong> 3.3.2 Labels or Instructions</li>
-        <li><strong>fails</strong> 1.3.1 Info and Relationships</li>
-        <li><strong>fails</strong> 2.5.3 Label in Name</li>
-        <li><strong>fails</strong> 4.1.2 Name, Role, Value</li>
-    </ul>
-</div></section>
-
-<!-- -->
-
-<section class="slide code listing"><div>
-    <pre><code class="html">&lt;p&gt;First name&lt;/p&gt;
-&lt;input type="text" <mark>aria-label="First name"</mark>&gt;</code></pre>
-    <ul>
-        <li><strong>passes</strong> 2.4.6 Headings and Labels</li>
-        <li><strong>passes</strong> 3.3.2 Labels or Instructions</li>
-        <li><strong>passes</strong> 2.5.3 Label in Name</li>
-        <li><strong>passes</strong> 4.1.2 Name, Role, Value</li>
-        <li><strong>passes</strong> (arguably) 1.3.1 Info and Relationships</li>
-    </ul>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <div>
         <h2>2.1.1 <strong>Keyboard</strong> (A)</h2>
         <blockquote><p>All functionality of the content is operable through a keyboard interface […]</p></blockquote>
         <p>doesn't say anything about <strong>which keys</strong> are needed to operate controls/functionality</p>
@@ -431,23 +382,6 @@
 
 <section class="slide impact"><div>
     <div>
-        WCAG has a few strange <strong>omissions</strong>, <strong>ambiguities</strong>, <strong>exemptions</strong>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <div>
-        <h2>2.4.4 <strong>Link Purpose (In Context)</strong> (AA)</h2>
-        <blockquote><p>The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context […]</p></blockquote>
-        <p>what counts as "programmatically determined link context"? do preceding headings count?</p>
-    </div>
-</div></section>
-<!-- -->
-
-<section class="slide impact"><div>
-    <div>
         "I think what the<br><strong>founding fathers/mothers</strong><br>of WCAG meant to say …"
     </div>
 </div></section>
@@ -652,37 +586,6 @@
         </blockquote>
         <p>to help low vision users. should ideally have been "use responsive design"</p>
         <p>instead, it was watered down to 400% zoom on a 1280×1024 display … and now <strong>only</strong> normatively applies at those <strong>exact values</strong></p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <div>
-        <h2>1.4.12 <strong>Text Spacing</strong> (AA)</h2>
-        <blockquote><p>In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting <strong>all of the following</strong> […]:</p>
-        <ul>
-            <li>Line height (line spacing) to at least 1.5 times the font size</li>
-            <li>Spacing following paragraphs to at least 2 times the font size</li>
-            <li>Letter spacing (tracking) to at least 0.12 times the font size</li>
-            <li>Word spacing to at least 0.16 times the font size</li>
-        </ul>
-        <p>[…]</p>
-        </blockquote>
-        <p>only those <strong>exact values and over</strong></p>
-        <p>do you test the <strong>"at least"</strong> part here, and up to which values?</p>
-        <p>what if user changes just a few (e.g. just letter spacing)</p>
-    </div>
-</div></section>
-
-<!-- -->
-
-<section class="slide listing"><div>
-    <div>
-        <blockquote>this bookmarklet didn't work to change text styles … can I fail this?</blockquote>
-        <p><strong>no you can't</strong> … the SC doesn't care if a user can or can't change the metrics, or if a particular bookmarklet or method doesn't work.</p>
-        <p>only that <em>if</em> the metrics are indeed changed, <em>then</em> content doesn't become unreadable or unusable.</p>
-        <p><small><a target=_blank rel=noopener href="https://github.com/w3c/wcag/pull/1687">Understanding 1.4.12: clarify the intent and author responsibility #1687</a></small></p>
     </div>
 </div></section>
 
